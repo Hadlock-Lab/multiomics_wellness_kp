@@ -16,25 +16,26 @@ def load_data(data_folder):
         id_type_mapping[line[0]] = line[2].split(':')[-1] if line[2].startswith("biolink:") else line[2]
     next(edges_data)
     for line in edges_data:
-        yield {
-            "_id": '-'.join([line[0], str(line[1]), str(line[2])]),
-            "subject": {
-                "id": line[0],
-                line[0].split(':')[0]: line[0],
-                "name": line[-2],
-                "type": id_type_mapping[line[0]]
-            },
-            "association": {
-                "edge_label": line[1].split(':')[-1],
-                "relation": line[3],
-                "N": float(line[4]),
-                "rho": float(line[5]),
-                "pval": float(line[6])
-            },
-            "object": {
-                "id": line[2],
-                line[2].split(':')[0]: line[2],
-                "name": line[-1],
-                "type": id_type_mapping[line[2]]
+        if line[0] and line[1]:
+            yield {
+                "_id": '-'.join([line[0], str(line[1]), str(line[2])]),
+                "subject": {
+                    "id": line[0],
+                    line[0].split(':')[0]: line[0],
+                    "name": line[-2],
+                    "type": id_type_mapping[line[0]]
+                },
+                "association": {
+                    "edge_label": line[1].split(':')[-1],
+                    "relation": line[3],
+                    "N": float(line[4]),
+                    "rho": float(line[5]),
+                    "pval": float(line[6])
+                },
+                "object": {
+                    "id": line[2],
+                    line[2].split(':')[0]: line[2],
+                    "name": line[-1],
+                    "type": id_type_mapping[line[2]]
+                }
             }
-        }
