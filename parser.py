@@ -16,7 +16,7 @@ def load_data(data_folder):
         id_type_mapping[line[0]] = line[2].split(':')[-1] if line[2].startswith("biolink:") else line[2]
     next(edges_data)
     for line in edges_data:
-        if line[0] and line[1]:
+        if line[0] and line[1] and line[0].split(':')[0] and line[2].split(':')[0]:
             yield {
                 "_id": '-'.join([line[0], str(line[1]), str(line[2]), str(line[2]), str(line[5]), line[-1]]),
                 "subject": {
