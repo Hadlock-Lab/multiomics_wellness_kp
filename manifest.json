@@ -1,0 +1,20 @@
+{
+    "version": "0.1",
+    "__metadata__": {
+        "license_url": "",
+        "licence": "CC BY 4.0",
+        "url": ""
+    },
+    "dumper": {
+        "data_url": [
+            "http://localhost:8081/dataupload/src/wellness_kg_edges.tsv",
+            "http://localhost:8081/dataupload/src/wellness_kg_nodes.tsv"
+        ],
+        "uncompress": false,
+        "release": "version:get_release"
+    },
+    "uploader": {
+        "parser": "parser:load_data",
+        "on_duplicates": "error"
+    }
+}
