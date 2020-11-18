@@ -18,7 +18,7 @@ def load_data(data_folder):
     for line in edges_data:
         if line[0] and line[1]:
             yield {
-                "_id": '-'.join([line[0], str(line[1]), str(line[2]), str(line[2]), str(line[4]), line[-1]]),
+                "_id": '-'.join([line[0], str(line[1]), str(line[2]), str(line[2]), str(line[5]), line[-1]]),
                 "subject": {
                     "id": line[0],
                     line[0].split(':')[0]: line[0],
