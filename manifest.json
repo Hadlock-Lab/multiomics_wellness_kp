@@ -1,5 +1,5 @@
 {
-    "version": "0.1",
+    "version": "0.2",
     "__metadata__": {
         "license_url": "",
         "licence": "CC BY 4.0",
@@ -7,14 +7,14 @@
     },
     "dumper": {
         "data_url": [
-            "http://localhost:8081/dataupload/src/wellness_kg_edges.tsv",
-            "http://localhost:8081/dataupload/src/wellness_kg_nodes.tsv"
+            "https://storage.googleapis.com/multiomics_provider_kp_data/wellness/wellness_kg_edges_v1.3.tsv",
+            "https://storage.googleapis.com/multiomics_provider_kp_data/wellness/wellness_kg_nodes_v1.3.tsv"
         ],
         "uncompress": false,
         "release": "version:get_release"
     },
     "uploader": {
-        "parser": "parser:load_data",
+        "parser": "file_parser:load_data",
         "on_duplicates": "ignore"
     }
 }
