@@ -39,8 +39,9 @@ def load_data(data_folder):
             predicate = {
                 "type": line[1].split(':')[-1] if line[1].startswith("biolink:") else line[1],
                 "relation": line[3],
-                "provided_by": "Multiomics Provider: Wellness",
                 "category": line[9].split(':')[-1] if line[9].startswith("biolink:") else line[9],
+                "provided_by": "Multiomics Provider: Wellness",
+                "provenance": "https://github.com/NCATSTranslator/Translator-All/wiki/Wellness-KP",
                 "N": int(float(line[4])),
                 "rho": int(float(line[5])*1e5)/1e5,
                 "Bonferroni_pval": float(line[6])
