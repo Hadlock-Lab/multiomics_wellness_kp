@@ -14,6 +14,8 @@ info:
     team:
     - Multiomics Provider
     - Service Provider
+  x-trapi:
+    version: 1.0.0
 servers:
 - description: Encrypted Production server
   url: https://biothings.ncats.io/multiomics_wellness_kp
@@ -26,6 +28,7 @@ tags:
 - name: annotation
 - name: query
 - name: translator
+- name: trapi
 - name: biothings
 - name: biothings_graph
 paths:
@@ -1464,7 +1467,7 @@ components:
         semantic: ChemicalSubstance
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:ChemicalSubstance
+        q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1481,7 +1484,7 @@ components:
         semantic: ChemicalSubstance
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:ChemicalSubstance
+        q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1498,7 +1501,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:ClinicalFinding
+        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1515,7 +1518,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:ClinicalFinding
+        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1532,7 +1535,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:ClinicalFinding
+        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1549,7 +1552,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:ClinicalFinding
+        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1566,7 +1569,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1583,7 +1586,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1600,7 +1603,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1617,7 +1620,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1634,7 +1637,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1651,7 +1654,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1668,7 +1671,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1685,7 +1688,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1702,7 +1705,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1719,7 +1722,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1736,7 +1739,7 @@ components:
         semantic: Protein
       parameters:
         fields: object,predicate
-        q: subject.id:CAS\:{inputs[0]} AND object.type:Protein
+        q: subject.id:"{inputs[0]}" AND object.type:Protein
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1753,7 +1756,7 @@ components:
         semantic: Protein
       parameters:
         fields: subject,predicate
-        q: object.id:CAS\:{inputs[0]} AND subject.type:Protein
+        q: object.id:"{inputs[0]}" AND subject.type:Protein
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1770,7 +1773,7 @@ components:
         semantic: ChemicalSubstance
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:ChemicalSubstance
+        q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1787,7 +1790,7 @@ components:
         semantic: ChemicalSubstance
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:ChemicalSubstance
+        q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1804,7 +1807,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:ClinicalFinding
+        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1821,7 +1824,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:ClinicalFinding
+        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1838,7 +1841,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:ClinicalFinding
+        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1855,7 +1858,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:ClinicalFinding
+        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1872,7 +1875,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1889,7 +1892,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1906,7 +1909,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1923,7 +1926,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1940,7 +1943,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1957,7 +1960,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1974,7 +1977,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1991,7 +1994,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2008,7 +2011,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2025,7 +2028,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2042,7 +2045,7 @@ components:
         semantic: Protein
       parameters:
         fields: object,predicate
-        q: subject.id:HMDB\:{inputs[0]} AND object.type:Protein
+        q: subject.id:"{inputs[0]}" AND object.type:Protein
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2059,7 +2062,7 @@ components:
         semantic: Protein
       parameters:
         fields: subject,predicate
-        q: object.id:HMDB\:{inputs[0]} AND subject.type:Protein
+        q: object.id:"{inputs[0]}" AND subject.type:Protein
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2688,7 +2691,7 @@ components:
         semantic: ChemicalSubstance
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:ChemicalSubstance
+        q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2705,7 +2708,7 @@ components:
         semantic: ChemicalSubstance
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:ChemicalSubstance
+        q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2722,7 +2725,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:ClinicalFinding
+        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2739,7 +2742,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:ClinicalFinding
+        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2756,7 +2759,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:ClinicalFinding
+        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2773,7 +2776,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:ClinicalFinding
+        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2790,7 +2793,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2807,7 +2810,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2824,7 +2827,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2841,7 +2844,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2858,7 +2861,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2875,7 +2878,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2892,7 +2895,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2909,7 +2912,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2926,7 +2929,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:Metabolite
+        q: subject.id:"{inputs[0]}" AND object.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2943,7 +2946,7 @@ components:
         semantic: Metabolite
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:Metabolite
+        q: object.id:"{inputs[0]}" AND subject.type:Metabolite
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2960,7 +2963,7 @@ components:
         semantic: Protein
       parameters:
         fields: object,predicate
-        q: subject.id:PUBCHEM\:{inputs[0]} AND object.type:Protein
+        q: subject.id:"{inputs[0]}" AND object.type:Protein
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -2977,7 +2980,7 @@ components:
         semantic: Protein
       parameters:
         fields: subject,predicate
-        q: object.id:PUBCHEM\:{inputs[0]} AND subject.type:Protein
+        q: object.id:"{inputs[0]}" AND subject.type:Protein
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
