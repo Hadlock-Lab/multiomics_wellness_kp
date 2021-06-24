@@ -540,10 +540,10 @@ components:
     ChemicalSubstance6-ChemicalSubstance6:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:MESH\:{inputs[0]} AND object.type:ChemicalSubstance
@@ -557,10 +557,10 @@ components:
     ChemicalSubstance6-ChemicalSubstance6Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:MESH\:{inputs[0]} AND subject.type:ChemicalSubstance
@@ -574,7 +574,7 @@ components:
     ChemicalSubstance6-ClinicalFinding1:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -591,7 +591,7 @@ components:
     ChemicalSubstance6-ClinicalFinding1Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -608,7 +608,7 @@ components:
     ChemicalSubstance6-ClinicalFinding5:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -625,7 +625,7 @@ components:
     ChemicalSubstance6-ClinicalFinding5Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -642,10 +642,10 @@ components:
     ChemicalSubstance6-Metabolite0:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:MESH\:{inputs[0]} AND object.type:Metabolite
@@ -659,10 +659,10 @@ components:
     ChemicalSubstance6-Metabolite0Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:MESH\:{inputs[0]} AND subject.type:Metabolite
@@ -676,10 +676,10 @@ components:
     ChemicalSubstance6-Metabolite2:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:MESH\:{inputs[0]} AND object.type:Metabolite
@@ -693,10 +693,10 @@ components:
     ChemicalSubstance6-Metabolite2Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:MESH\:{inputs[0]} AND subject.type:Metabolite
@@ -710,10 +710,10 @@ components:
     ChemicalSubstance6-Metabolite3:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:MESH\:{inputs[0]} AND object.type:Metabolite
@@ -727,10 +727,10 @@ components:
     ChemicalSubstance6-Metabolite3Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:MESH\:{inputs[0]} AND subject.type:Metabolite
@@ -744,10 +744,10 @@ components:
     ChemicalSubstance6-Metabolite4:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:MESH\:{inputs[0]} AND object.type:Metabolite
@@ -761,10 +761,10 @@ components:
     ChemicalSubstance6-Metabolite4Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:MESH\:{inputs[0]} AND subject.type:Metabolite
@@ -778,10 +778,10 @@ components:
     ChemicalSubstance6-Metabolite7:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:MESH\:{inputs[0]} AND object.type:Metabolite
@@ -795,10 +795,10 @@ components:
     ChemicalSubstance6-Metabolite7Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:MESH\:{inputs[0]} AND subject.type:Metabolite
@@ -812,7 +812,7 @@ components:
     ChemicalSubstance6-Protein8:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -829,7 +829,7 @@ components:
     ChemicalSubstance6-Protein8Rev:
     - inputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -849,7 +849,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
@@ -866,7 +866,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
@@ -951,7 +951,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -968,7 +968,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -985,7 +985,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1002,7 +1002,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1019,7 +1019,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1036,7 +1036,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1053,7 +1053,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1070,7 +1070,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1087,7 +1087,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1104,7 +1104,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1155,7 +1155,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
@@ -1172,7 +1172,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
@@ -1257,7 +1257,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1274,7 +1274,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1291,7 +1291,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1308,7 +1308,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1325,7 +1325,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1342,7 +1342,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1359,7 +1359,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1376,7 +1376,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1393,7 +1393,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1410,7 +1410,7 @@ components:
         semantic: ClinicalFinding
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1458,10 +1458,10 @@ components:
     Metabolite0-ChemicalSubstance6:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
@@ -1475,10 +1475,10 @@ components:
     Metabolite0-ChemicalSubstance6Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
@@ -1492,7 +1492,7 @@ components:
     Metabolite0-ClinicalFinding1:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -1509,7 +1509,7 @@ components:
     Metabolite0-ClinicalFinding1Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -1526,7 +1526,7 @@ components:
     Metabolite0-ClinicalFinding5:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -1543,7 +1543,7 @@ components:
     Metabolite0-ClinicalFinding5Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -1560,10 +1560,10 @@ components:
     Metabolite0-Metabolite0:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1577,10 +1577,10 @@ components:
     Metabolite0-Metabolite0Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1594,10 +1594,10 @@ components:
     Metabolite0-Metabolite2:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1611,10 +1611,10 @@ components:
     Metabolite0-Metabolite2Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1628,10 +1628,10 @@ components:
     Metabolite0-Metabolite3:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1645,10 +1645,10 @@ components:
     Metabolite0-Metabolite3Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1662,10 +1662,10 @@ components:
     Metabolite0-Metabolite4:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1679,10 +1679,10 @@ components:
     Metabolite0-Metabolite4Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1696,10 +1696,10 @@ components:
     Metabolite0-Metabolite7:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1713,10 +1713,10 @@ components:
     Metabolite0-Metabolite7Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1730,7 +1730,7 @@ components:
     Metabolite0-Protein8:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -1747,7 +1747,7 @@ components:
     Metabolite0-Protein8Rev:
     - inputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -1764,10 +1764,10 @@ components:
     Metabolite2-ChemicalSubstance6:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
@@ -1781,10 +1781,10 @@ components:
     Metabolite2-ChemicalSubstance6Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
@@ -1798,7 +1798,7 @@ components:
     Metabolite2-ClinicalFinding1:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -1815,7 +1815,7 @@ components:
     Metabolite2-ClinicalFinding1Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -1832,7 +1832,7 @@ components:
     Metabolite2-ClinicalFinding5:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -1849,7 +1849,7 @@ components:
     Metabolite2-ClinicalFinding5Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -1866,10 +1866,10 @@ components:
     Metabolite2-Metabolite0:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1883,10 +1883,10 @@ components:
     Metabolite2-Metabolite0Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1900,10 +1900,10 @@ components:
     Metabolite2-Metabolite2:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1917,10 +1917,10 @@ components:
     Metabolite2-Metabolite2Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1934,10 +1934,10 @@ components:
     Metabolite2-Metabolite3:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1951,10 +1951,10 @@ components:
     Metabolite2-Metabolite3Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -1968,10 +1968,10 @@ components:
     Metabolite2-Metabolite4:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -1985,10 +1985,10 @@ components:
     Metabolite2-Metabolite4Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2002,10 +2002,10 @@ components:
     Metabolite2-Metabolite7:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2019,10 +2019,10 @@ components:
     Metabolite2-Metabolite7Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2036,7 +2036,7 @@ components:
     Metabolite2-Protein8:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2053,7 +2053,7 @@ components:
     Metabolite2-Protein8Rev:
     - inputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2070,10 +2070,10 @@ components:
     Metabolite3-ChemicalSubstance6:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
@@ -2087,10 +2087,10 @@ components:
     Metabolite3-ChemicalSubstance6Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
@@ -2104,7 +2104,7 @@ components:
     Metabolite3-ClinicalFinding1:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -2121,7 +2121,7 @@ components:
     Metabolite3-ClinicalFinding1Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -2138,7 +2138,7 @@ components:
     Metabolite3-ClinicalFinding5:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -2155,7 +2155,7 @@ components:
     Metabolite3-ClinicalFinding5Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -2172,10 +2172,10 @@ components:
     Metabolite3-Metabolite0:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2189,10 +2189,10 @@ components:
     Metabolite3-Metabolite0Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2206,10 +2206,10 @@ components:
     Metabolite3-Metabolite2:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2223,10 +2223,10 @@ components:
     Metabolite3-Metabolite2Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2240,10 +2240,10 @@ components:
     Metabolite3-Metabolite3:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2257,10 +2257,10 @@ components:
     Metabolite3-Metabolite3Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2274,10 +2274,10 @@ components:
     Metabolite3-Metabolite4:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2291,10 +2291,10 @@ components:
     Metabolite3-Metabolite4Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2308,10 +2308,10 @@ components:
     Metabolite3-Metabolite7:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2325,10 +2325,10 @@ components:
     Metabolite3-Metabolite7Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2342,7 +2342,7 @@ components:
     Metabolite3-Protein8:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2359,7 +2359,7 @@ components:
     Metabolite3-Protein8Rev:
     - inputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2376,10 +2376,10 @@ components:
     Metabolite4-ChemicalSubstance6:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
@@ -2393,10 +2393,10 @@ components:
     Metabolite4-ChemicalSubstance6Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
@@ -2410,7 +2410,7 @@ components:
     Metabolite4-ClinicalFinding1:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -2427,7 +2427,7 @@ components:
     Metabolite4-ClinicalFinding1Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -2444,7 +2444,7 @@ components:
     Metabolite4-ClinicalFinding5:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -2461,7 +2461,7 @@ components:
     Metabolite4-ClinicalFinding5Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -2478,10 +2478,10 @@ components:
     Metabolite4-Metabolite0:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2495,10 +2495,10 @@ components:
     Metabolite4-Metabolite0Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2512,10 +2512,10 @@ components:
     Metabolite4-Metabolite2:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2529,10 +2529,10 @@ components:
     Metabolite4-Metabolite2Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2546,10 +2546,10 @@ components:
     Metabolite4-Metabolite3:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2563,10 +2563,10 @@ components:
     Metabolite4-Metabolite3Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2580,10 +2580,10 @@ components:
     Metabolite4-Metabolite4:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2597,10 +2597,10 @@ components:
     Metabolite4-Metabolite4Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2614,10 +2614,10 @@ components:
     Metabolite4-Metabolite7:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2631,10 +2631,10 @@ components:
     Metabolite4-Metabolite7Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2648,7 +2648,7 @@ components:
     Metabolite4-Protein8:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2665,7 +2665,7 @@ components:
     Metabolite4-Protein8Rev:
     - inputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2682,10 +2682,10 @@ components:
     Metabolite7-ChemicalSubstance6:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:ChemicalSubstance
@@ -2699,10 +2699,10 @@ components:
     Metabolite7-ChemicalSubstance6Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
@@ -2716,7 +2716,7 @@ components:
     Metabolite7-ClinicalFinding1:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -2733,7 +2733,7 @@ components:
     Metabolite7-ClinicalFinding1Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CHEBI
         semantic: ClinicalFinding
@@ -2750,7 +2750,7 @@ components:
     Metabolite7-ClinicalFinding5:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -2767,7 +2767,7 @@ components:
     Metabolite7-ClinicalFinding5Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
@@ -2784,10 +2784,10 @@ components:
     Metabolite7-Metabolite0:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2801,10 +2801,10 @@ components:
     Metabolite7-Metabolite0Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2818,10 +2818,10 @@ components:
     Metabolite7-Metabolite2:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2835,10 +2835,10 @@ components:
     Metabolite7-Metabolite2Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2852,10 +2852,10 @@ components:
     Metabolite7-Metabolite3:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2869,10 +2869,10 @@ components:
     Metabolite7-Metabolite3Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2886,10 +2886,10 @@ components:
     Metabolite7-Metabolite4:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2903,10 +2903,10 @@ components:
     Metabolite7-Metabolite4Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2920,10 +2920,10 @@ components:
     Metabolite7-Metabolite7:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:"{inputs[0]}" AND object.type:Metabolite
@@ -2937,10 +2937,10 @@ components:
     Metabolite7-Metabolite7Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:"{inputs[0]}" AND subject.type:Metabolite
@@ -2954,7 +2954,7 @@ components:
     Metabolite7-Protein8:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2971,7 +2971,7 @@ components:
     Metabolite7-Protein8Rev:
     - inputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       outputs:
       - id: UniProtKB
         semantic: Protein
@@ -2991,7 +2991,7 @@ components:
         semantic: Protein
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:UniProtKB\:{inputs[0]} AND object.type:ChemicalSubstance
@@ -3008,7 +3008,7 @@ components:
         semantic: Protein
       outputs:
       - id: MESH
-        semantic: ChemicalSubstance
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:UniProtKB\:{inputs[0]} AND subject.type:ChemicalSubstance
@@ -3093,7 +3093,7 @@ components:
         semantic: Protein
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:UniProtKB\:{inputs[0]} AND object.type:Metabolite
@@ -3110,7 +3110,7 @@ components:
         semantic: Protein
       outputs:
       - id: CAS
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:UniProtKB\:{inputs[0]} AND subject.type:Metabolite
@@ -3127,7 +3127,7 @@ components:
         semantic: Protein
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:UniProtKB\:{inputs[0]} AND object.type:Metabolite
@@ -3144,7 +3144,7 @@ components:
         semantic: Protein
       outputs:
       - id: HMDB
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:UniProtKB\:{inputs[0]} AND subject.type:Metabolite
@@ -3161,7 +3161,7 @@ components:
         semantic: Protein
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:UniProtKB\:{inputs[0]} AND object.type:Metabolite
@@ -3178,7 +3178,7 @@ components:
         semantic: Protein
       outputs:
       - id: KEGG.COMPOUND
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:UniProtKB\:{inputs[0]} AND subject.type:Metabolite
@@ -3195,7 +3195,7 @@ components:
         semantic: Protein
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:UniProtKB\:{inputs[0]} AND object.type:Metabolite
@@ -3212,7 +3212,7 @@ components:
         semantic: Protein
       outputs:
       - id: KEGG.DRUG
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:UniProtKB\:{inputs[0]} AND subject.type:Metabolite
@@ -3229,7 +3229,7 @@ components:
         semantic: Protein
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: object,predicate
         q: subject.id:UniProtKB\:{inputs[0]} AND object.type:Metabolite
@@ -3246,7 +3246,7 @@ components:
         semantic: Protein
       outputs:
       - id: PUBCHEM
-        semantic: Metabolite
+        semantic: SmallMolecule
       parameters:
         fields: subject,predicate
         q: object.id:UniProtKB\:{inputs[0]} AND subject.type:Metabolite
