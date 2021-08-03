@@ -10,6 +10,7 @@ info:
   title: Multiomics Wellness KP API
   version: '1.1'
   x-translator:
+    infores-curie: "infores:biothings-multiomics-wellness"
     component: KP
     team:
     - Multiomics Provider
@@ -552,7 +553,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-ChemicalSubstance6Rev:
     - inputs:
@@ -569,7 +570,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-ClinicalFinding1:
     - inputs:
@@ -586,7 +587,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-ClinicalFinding1Rev:
     - inputs:
@@ -603,7 +604,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-ClinicalFinding5:
     - inputs:
@@ -620,7 +621,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-ClinicalFinding5Rev:
     - inputs:
@@ -637,7 +638,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite0:
     - inputs:
@@ -654,7 +655,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite0Rev:
     - inputs:
@@ -671,7 +672,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite2:
     - inputs:
@@ -688,7 +689,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite2Rev:
     - inputs:
@@ -705,7 +706,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite3:
     - inputs:
@@ -722,7 +723,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite3Rev:
     - inputs:
@@ -739,7 +740,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite4:
     - inputs:
@@ -756,7 +757,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite4Rev:
     - inputs:
@@ -773,7 +774,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite7:
     - inputs:
@@ -790,7 +791,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Metabolite7Rev:
     - inputs:
@@ -807,7 +808,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Protein8:
     - inputs:
@@ -824,7 +825,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ChemicalSubstance6-Protein8Rev:
     - inputs:
@@ -841,7 +842,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-ChemicalSubstance6:
     - inputs:
@@ -858,7 +859,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-ChemicalSubstance6Rev:
     - inputs:
@@ -875,7 +876,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-ClinicalFinding1:
     - inputs:
@@ -892,7 +893,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-ClinicalFinding1Rev:
     - inputs:
@@ -909,7 +910,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-ClinicalFinding5:
     - inputs:
@@ -926,7 +927,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-ClinicalFinding5Rev:
     - inputs:
@@ -943,7 +944,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite0:
     - inputs:
@@ -960,7 +961,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite0Rev:
     - inputs:
@@ -977,7 +978,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite2:
     - inputs:
@@ -994,7 +995,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite2Rev:
     - inputs:
@@ -1011,7 +1012,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite3:
     - inputs:
@@ -1028,7 +1029,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite3Rev:
     - inputs:
@@ -1045,7 +1046,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite4:
     - inputs:
@@ -1062,7 +1063,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite4Rev:
     - inputs:
@@ -1079,7 +1080,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite7:
     - inputs:
@@ -1096,7 +1097,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Metabolite7Rev:
     - inputs:
@@ -1113,7 +1114,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Protein8:
     - inputs:
@@ -1130,7 +1131,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding1-Protein8Rev:
     - inputs:
@@ -1147,7 +1148,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-ChemicalSubstance6:
     - inputs:
@@ -1164,7 +1165,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-ChemicalSubstance6Rev:
     - inputs:
@@ -1181,7 +1182,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-ClinicalFinding1:
     - inputs:
@@ -1198,7 +1199,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-ClinicalFinding1Rev:
     - inputs:
@@ -1215,7 +1216,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-ClinicalFinding5:
     - inputs:
@@ -1232,7 +1233,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-ClinicalFinding5Rev:
     - inputs:
@@ -1249,7 +1250,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite0:
     - inputs:
@@ -1266,7 +1267,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite0Rev:
     - inputs:
@@ -1283,7 +1284,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite2:
     - inputs:
@@ -1300,7 +1301,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite2Rev:
     - inputs:
@@ -1317,7 +1318,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite3:
     - inputs:
@@ -1334,7 +1335,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite3Rev:
     - inputs:
@@ -1351,7 +1352,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite4:
     - inputs:
@@ -1368,7 +1369,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite4Rev:
     - inputs:
@@ -1385,7 +1386,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite7:
     - inputs:
@@ -1402,7 +1403,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Metabolite7Rev:
     - inputs:
@@ -1419,7 +1420,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Protein8:
     - inputs:
@@ -1436,7 +1437,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     ClinicalFinding5-Protein8Rev:
     - inputs:
@@ -1453,7 +1454,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-ChemicalSubstance6:
     - inputs:
@@ -1470,7 +1471,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-ChemicalSubstance6Rev:
     - inputs:
@@ -1487,7 +1488,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-ClinicalFinding1:
     - inputs:
@@ -1504,7 +1505,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-ClinicalFinding1Rev:
     - inputs:
@@ -1521,7 +1522,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-ClinicalFinding5:
     - inputs:
@@ -1538,7 +1539,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-ClinicalFinding5Rev:
     - inputs:
@@ -1555,7 +1556,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite0:
     - inputs:
@@ -1572,7 +1573,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite0Rev:
     - inputs:
@@ -1589,7 +1590,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite2:
     - inputs:
@@ -1606,7 +1607,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite2Rev:
     - inputs:
@@ -1623,7 +1624,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite3:
     - inputs:
@@ -1640,7 +1641,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite3Rev:
     - inputs:
@@ -1657,7 +1658,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite4:
     - inputs:
@@ -1674,7 +1675,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite4Rev:
     - inputs:
@@ -1691,7 +1692,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite7:
     - inputs:
@@ -1708,7 +1709,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Metabolite7Rev:
     - inputs:
@@ -1725,7 +1726,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Protein8:
     - inputs:
@@ -1742,7 +1743,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite0-Protein8Rev:
     - inputs:
@@ -1759,7 +1760,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-ChemicalSubstance6:
     - inputs:
@@ -1776,7 +1777,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-ChemicalSubstance6Rev:
     - inputs:
@@ -1793,7 +1794,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-ClinicalFinding1:
     - inputs:
@@ -1810,7 +1811,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-ClinicalFinding1Rev:
     - inputs:
@@ -1827,7 +1828,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-ClinicalFinding5:
     - inputs:
@@ -1844,7 +1845,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-ClinicalFinding5Rev:
     - inputs:
@@ -1861,7 +1862,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite0:
     - inputs:
@@ -1878,7 +1879,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite0Rev:
     - inputs:
@@ -1895,7 +1896,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite2:
     - inputs:
@@ -1912,7 +1913,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite2Rev:
     - inputs:
@@ -1929,7 +1930,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite3:
     - inputs:
@@ -1946,7 +1947,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite3Rev:
     - inputs:
@@ -1963,7 +1964,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite4:
     - inputs:
@@ -1980,7 +1981,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite4Rev:
     - inputs:
@@ -1997,7 +1998,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite7:
     - inputs:
@@ -2014,7 +2015,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Metabolite7Rev:
     - inputs:
@@ -2031,7 +2032,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Protein8:
     - inputs:
@@ -2048,7 +2049,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite2-Protein8Rev:
     - inputs:
@@ -2065,7 +2066,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-ChemicalSubstance6:
     - inputs:
@@ -2082,7 +2083,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-ChemicalSubstance6Rev:
     - inputs:
@@ -2099,7 +2100,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-ClinicalFinding1:
     - inputs:
@@ -2116,7 +2117,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-ClinicalFinding1Rev:
     - inputs:
@@ -2133,7 +2134,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-ClinicalFinding5:
     - inputs:
@@ -2150,7 +2151,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-ClinicalFinding5Rev:
     - inputs:
@@ -2167,7 +2168,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite0:
     - inputs:
@@ -2184,7 +2185,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite0Rev:
     - inputs:
@@ -2201,7 +2202,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite2:
     - inputs:
@@ -2218,7 +2219,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite2Rev:
     - inputs:
@@ -2235,7 +2236,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite3:
     - inputs:
@@ -2252,7 +2253,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite3Rev:
     - inputs:
@@ -2269,7 +2270,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite4:
     - inputs:
@@ -2286,7 +2287,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite4Rev:
     - inputs:
@@ -2303,7 +2304,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite7:
     - inputs:
@@ -2320,7 +2321,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Metabolite7Rev:
     - inputs:
@@ -2337,7 +2338,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Protein8:
     - inputs:
@@ -2354,7 +2355,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite3-Protein8Rev:
     - inputs:
@@ -2371,7 +2372,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-ChemicalSubstance6:
     - inputs:
@@ -2388,7 +2389,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-ChemicalSubstance6Rev:
     - inputs:
@@ -2405,7 +2406,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-ClinicalFinding1:
     - inputs:
@@ -2422,7 +2423,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-ClinicalFinding1Rev:
     - inputs:
@@ -2439,7 +2440,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-ClinicalFinding5:
     - inputs:
@@ -2456,7 +2457,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-ClinicalFinding5Rev:
     - inputs:
@@ -2473,7 +2474,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite0:
     - inputs:
@@ -2490,7 +2491,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite0Rev:
     - inputs:
@@ -2507,7 +2508,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite2:
     - inputs:
@@ -2524,7 +2525,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite2Rev:
     - inputs:
@@ -2541,7 +2542,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite3:
     - inputs:
@@ -2558,7 +2559,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite3Rev:
     - inputs:
@@ -2575,7 +2576,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite4:
     - inputs:
@@ -2592,7 +2593,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite4Rev:
     - inputs:
@@ -2609,7 +2610,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite7:
     - inputs:
@@ -2626,7 +2627,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Metabolite7Rev:
     - inputs:
@@ -2643,7 +2644,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Protein8:
     - inputs:
@@ -2660,7 +2661,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite4-Protein8Rev:
     - inputs:
@@ -2677,7 +2678,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-ChemicalSubstance6:
     - inputs:
@@ -2694,7 +2695,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-ChemicalSubstance6Rev:
     - inputs:
@@ -2711,7 +2712,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-ClinicalFinding1:
     - inputs:
@@ -2728,7 +2729,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-ClinicalFinding1Rev:
     - inputs:
@@ -2745,7 +2746,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-ClinicalFinding5:
     - inputs:
@@ -2762,7 +2763,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-ClinicalFinding5Rev:
     - inputs:
@@ -2779,7 +2780,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite0:
     - inputs:
@@ -2796,7 +2797,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite0Rev:
     - inputs:
@@ -2813,7 +2814,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite2:
     - inputs:
@@ -2830,7 +2831,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite2Rev:
     - inputs:
@@ -2847,7 +2848,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite3:
     - inputs:
@@ -2864,7 +2865,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite3Rev:
     - inputs:
@@ -2881,7 +2882,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite4:
     - inputs:
@@ -2898,7 +2899,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite4Rev:
     - inputs:
@@ -2915,7 +2916,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite7:
     - inputs:
@@ -2932,7 +2933,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Metabolite7Rev:
     - inputs:
@@ -2949,7 +2950,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Protein8:
     - inputs:
@@ -2966,7 +2967,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Metabolite7-Protein8Rev:
     - inputs:
@@ -2983,7 +2984,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-ChemicalSubstance6:
     - inputs:
@@ -3000,7 +3001,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-ChemicalSubstance6Rev:
     - inputs:
@@ -3017,7 +3018,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ChemicalSubstance6Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-ClinicalFinding1:
     - inputs:
@@ -3034,7 +3035,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-ClinicalFinding1Rev:
     - inputs:
@@ -3051,7 +3052,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding1Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-ClinicalFinding5:
     - inputs:
@@ -3068,7 +3069,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-ClinicalFinding5Rev:
     - inputs:
@@ -3085,7 +3086,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/ClinicalFinding5Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite0:
     - inputs:
@@ -3102,7 +3103,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite0Rev:
     - inputs:
@@ -3119,7 +3120,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite0Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite2:
     - inputs:
@@ -3136,7 +3137,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite2Rev:
     - inputs:
@@ -3153,7 +3154,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite2Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite3:
     - inputs:
@@ -3170,7 +3171,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite3Rev:
     - inputs:
@@ -3187,7 +3188,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite3Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite4:
     - inputs:
@@ -3204,7 +3205,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite4Rev:
     - inputs:
@@ -3221,7 +3222,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite4Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite7:
     - inputs:
@@ -3238,7 +3239,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Metabolite7Rev:
     - inputs:
@@ -3255,7 +3256,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Metabolite7Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Protein8:
     - inputs:
@@ -3272,7 +3273,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
     Protein8-Protein8Rev:
     - inputs:
@@ -3289,7 +3290,7 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/Protein8Rev'
-      source: 'Multiomics Provider: Wellness'
+      # source: 'Multiomics Provider: Wellness'
       supportBatch: false
   x-bte-response-mapping:
     ChemicalSubstance6:
