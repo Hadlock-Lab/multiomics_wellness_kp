@@ -1177,7 +1177,7 @@ components:
         semantic: SmallMolecule
       parameters:
         fields: subject,predicate
-        q: object.id:"{inputs[0]}" AND subject.type:ChemicalSubstance
+        q: object.id:LOINC\:{inputs[0]} AND subject.type:ChemicalSubstance
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1194,7 +1194,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
+        q: subject.id:LOINC\:{inputs[0]} AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1211,7 +1211,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
+        q: object.id:LOINC\:{inputs[0]} AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1228,7 +1228,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: object,predicate
-        q: subject.id:"{inputs[0]}" AND object.type:ClinicalFinding
+        q: subject.id:LOINC\:{inputs[0]} AND object.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
@@ -1245,7 +1245,7 @@ components:
         semantic: ClinicalFinding
       parameters:
         fields: subject,predicate
-        q: object.id:"{inputs[0]}" AND subject.type:ClinicalFinding
+        q: object.id:LOINC\:{inputs[0]} AND subject.type:ClinicalFinding
         size: 1000
         sort: predicate.Bonferroni_pval
       predicate: correlated_with
