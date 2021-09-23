@@ -28,9 +28,10 @@ def load_data(data_folder):
                 "type": id_type_mapping[line[0]]
             }
 
-            subject_idprefix = line[0] if (
-                line[0].split(":")[0]=="CHEBI") else line[0].split(":")[1]
-            subject.update( { line[0].split(':')[0].replace('.', '_'): subject_idprefix })
+            line0_prefix, line0_id = line[0].split(":")
+            subject_specialfield = line[0] if (
+                line0_prefix=="CHEBI") else line0_id
+            subject.update( { line0_prefix.replace('.', '_'): subject_specialfield })
 
             # Specify properties for object
             object_ = {
@@ -39,9 +40,10 @@ def load_data(data_folder):
                 "type": id_type_mapping[line[2]]
             }
 
-            object_idprefix = line[2] if (
-                line[2].split(":")[0]=="CHEBI") else line[2].split(":")[1]
-            object_.update( { line[2].split(':')[0].replace('.', '_'): object_idprefix })
+            line2_prefix, line2_id = line[2].split(":")
+            object_specialfield = line[2] if (
+                line2_prefix=="CHEBI") else line2_id
+            object_.update( { line2_prefix.replace('.', '_'): object_specialfield })
 
             # Specify properties for predicate
             predicate = {
