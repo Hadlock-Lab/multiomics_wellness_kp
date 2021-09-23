@@ -24,7 +24,7 @@ def load_data(data_folder):
             # Specify properties for subject
             subject = {
                 "id": line[0],
-                line[0].split(':')[0].replace('.', '_'): line[0],
+                line[0].split(':')[0].replace('.', '_'): line[0].split(":")[1],
                 "name": id_name_mapping[line[0]],
                 "type": id_type_mapping[line[0]]
             }
@@ -32,7 +32,7 @@ def load_data(data_folder):
             # Specify properties for object
             object_ = {
                 "id": line[2],
-                line[2].split(':')[0].replace('.', '_'): line[2],
+                line[2].split(':')[0].replace('.', '_'): line[2].split(":")[1],
                 "name": id_name_mapping[line[2]],
                 "type": id_type_mapping[line[2]]
             }
@@ -46,13 +46,13 @@ def load_data(data_folder):
                 "provenance": "https://github.com/NCATSTranslator/Translator-All/wiki/Wellness-KP",
                 "N": int(float(line[7])),
                 "type_of_relationship": line[9],
-                "strength_of_relationship": f'{float(line[10]):.4f}',
-                "bonferroni_pval": f'{float(line[13]):.4e}'
+                "strength_of_relationship": round(float(line[10]),4),
+                "bonferroni_pval": round(float(line[13]),4)
             }
 
             # Add weighted pvalue, if available
             weighted_pvalue = None if (
-                line[8] == '') else f'{float(line[8]):.4e}'
+                line[8] == '') else round(float(line[8]),4)
             if not(weighted_pvalue is None):
                 predicate.update({"weighted_pvalue": weighted_pvalue})
 
