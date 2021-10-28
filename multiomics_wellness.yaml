@@ -10,7 +10,7 @@ info:
   title: Multiomics Wellness KP API
   version: '1.1'
   x-translator:
-    infores-curie: "infores:biothings-multiomics-wellness"
+    infores: "infores:biothings-multiomics-wellness"
     component: KP
     team:
     - Multiomics Provider
