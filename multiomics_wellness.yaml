@@ -19,8 +19,10 @@ info:
 servers:
 - description: Encrypted Production server
   url: https://biothings.ncats.io/multiomics_wellness_kp
+  x-maturity: production
 - description: Production server
   url: https://biothings.ncats.io/multiomics_wellness_kp
+  x-maturity: production
 tags:
 - name: protein
 - name: chemical_substance
