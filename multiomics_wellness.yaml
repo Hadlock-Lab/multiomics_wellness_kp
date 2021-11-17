@@ -259,6 +259,8 @@ paths:
       - $ref: '#/components/x-bte-kgs-operations/LOINC-CAS-related-Rev'
       - $ref: '#/components/x-bte-kgs-operations/LOINC-KEGGDRUG-related'
       - $ref: '#/components/x-bte-kgs-operations/LOINC-KEGGDRUG-related-Rev'
+      - $ref: '#/components/x-bte-kgs-operations/LOINC-MESH-related'
+      - $ref: '#/components/x-bte-kgs-operations/LOINC-MESH-related-Rev'
       - $ref: '#/components/x-bte-kgs-operations/LOINC-UniProtKB-related'
       - $ref: '#/components/x-bte-kgs-operations/LOINC-UniProtKB-related-Rev'
       - $ref: '#/components/x-bte-kgs-operations/NCIT-LOINC'
@@ -573,6 +575,11 @@ components:
         type: array
       - type: string
   x-bte-kgs-operations:
+  ## note the semantic types of the diff id namespaces in the api:
+  ## - ClinicalFinding (we keep this mapping): LOINC, NCIT
+  ## - MolecularEntity (we use SmallMolecule instead): CHEBI, KEGG.COMPOUND, PUBCHEM.COMPOUND, HMDB, CAS, KEGG.DRUG
+  ## - ChemicalEntity (we use SmallMolecule instead): MESH
+  ## - Protein (we use Gene instead): UniProtKB
     LOINC-LOINC:
     ## https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:correlated_with AND object.type:ClinicalFinding AND _exists_:object.LOINC
     - supportBatch: true
@@ -1759,7 +1766,81 @@ components:
       # testExamples:
       #   - qInput: "KEGG.DRUG:D01085"   ## saccharin
       #     oneOutput: "LOINC:62238-1"       ## GFR, MDRD, AFRICAN AM
-  ## no LOINC-MESH-related: https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:related_to AND object.type:MolecularEntity AND _exists_:object.MESH
+  ## NOTE: MESH uses ChemicalEntity, not MolecularEntity
+    LOINC-MESH-related:  
+    ## https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:related_to AND object.type:ChemicalEntity AND _exists_:object.MESH
+    - supportBatch: true
+      useTemplating: True
+      inputs:
+      - id: LOINC
+        semantic: ClinicalFinding
+      requestBodyType: object
+      requestBody:   ## no prefix
+        body: >-
+          {"q": [ {{ queryInputs | wrap( '["', '","related_to","ChemicalEntity"]' ) }} ],
+          "scopes": ["subject.LOINC", "predicate.type", "object.type"]}
+      outputs:
+      - id: MESH
+        semantic: SmallMolecule
+      parameters:   ## no prefix
+        fields: >-
+          object.MESH,
+          predicate.N,
+          predicate.bonferroni_pval,
+          predicate.weighted_pvalue,
+          predicate.strength_of_relationship,
+          predicate.type_of_relationship,
+          predicate.qualifier,
+          predicate.qualifier_value,
+          predicate.provenance,
+          subject.id,
+          predicate.relation,
+          object.id
+        size: 1000
+      predicate: related_to
+      response_mapping:
+        $ref: '#/components/x-bte-response-mapping/MESH'
+      # source: 'Multiomics Provider: Wellness'
+      # testExamples:
+      #   - qInput: "LOINC:47828-9"   ## ADIPONECTIN, SERUM
+      #     oneOutput: "MESH:D013482"    ## SUPEROX DISMUT SOD
+    LOINC-MESH-related-Rev:
+    ## https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:related_to AND object.type:ChemicalEntity AND _exists_:object.MESH
+    - supportBatch: true
+      useTemplating: True
+      inputs:
+      - id: MESH
+        semantic: SmallMolecule
+      requestBodyType: object
+      requestBody:  ## no prefix
+        body: >-
+          {"q": [ {{ queryInputs | wrap( '["', '","related_to","ClinicalFinding"]' ) }} ],
+          "scopes": ["object.MESH", "predicate.type", "subject.type"]}
+      outputs:
+      - id: LOINC
+        semantic: ClinicalFinding
+      parameters:  ## no prefix
+        fields: >-
+          subject.LOINC,
+          predicate.N,
+          predicate.bonferroni_pval,
+          predicate.weighted_pvalue,
+          predicate.strength_of_relationship,
+          predicate.type_of_relationship,
+          predicate.qualifier,
+          predicate.qualifier_value,
+          predicate.provenance,
+          subject.id,
+          predicate.relation,
+          object.id
+        size: 1000
+      predicate: related_to
+      response_mapping:
+        $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+      # source: 'Multiomics Provider: Wellness'
+      # testExamples:
+      #   - qInput: "MESH:D013482"    ## SUPEROX DISMUT SOD
+      #     oneOutput: "LOINC:47828-9"   ## ADIPONECTIN, SERUM
     LOINC-UniProtKB-related:
     ## https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:related_to AND object.type:Protein AND _exists_:object.UniProtKB
     - supportBatch: true
