@@ -7935,9 +7935,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     LOINC-rev:
       LOINC: subject.LOINC  ## no prefix
       count: predicate.N
@@ -7948,9 +7948,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     NCIT:
       NCIT: object.NCIT  ## no prefix
       count: predicate.N
@@ -7961,9 +7961,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     NCIT-rev:
       NCIT: subject.NCIT  ## no prefix
       count: predicate.N
@@ -7974,9 +7974,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     CHEBI:
       CHEBI: object.CHEBI  ## HAS PREFIX
       count: predicate.N
@@ -7987,9 +7987,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     CHEBI-rev:
       CHEBI: subject.CHEBI  ## HAS PREFIX
       count: predicate.N
@@ -8000,9 +8000,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     KEGGCOMPOUND:
       "KEGG.COMPOUND": object.KEGG_COMPOUND  ## no prefix
       count: predicate.N
@@ -8013,9 +8013,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     KEGGCOMPOUND-rev:
       "KEGG.COMPOUND": subject.KEGG_COMPOUND  ## no prefix
       count: predicate.N
@@ -8026,9 +8026,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     PUBCHEM:
       "PUBCHEM.COMPOUND": object.PUBCHEM  ## no prefix
       count: predicate.N
@@ -8039,9 +8039,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     PUBCHEM-rev:
       "PUBCHEM.COMPOUND": subject.PUBCHEM  ## no prefix
       count: predicate.N
@@ -8052,9 +8052,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     HMDB:
       HMDB: object.HMDB  ## no prefix
       count: predicate.N
@@ -8065,9 +8065,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     HMDB-rev:
       HMDB: subject.HMDB  ## no prefix
       count: predicate.N
@@ -8078,9 +8078,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     CAS:
       CAS: object.CAS  ## no prefix
       count: predicate.N
@@ -8091,9 +8091,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     CAS-rev:
       CAS: subject.CAS  ## no prefix
       count: predicate.N
@@ -8104,9 +8104,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     KEGGDRUG:
       "KEGG.DRUG": object.KEGG_DRUG  ## no prefix
       count: predicate.N
@@ -8117,9 +8117,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     KEGGDRUG-rev:
       "KEGG.DRUG": subject.KEGG_DRUG  ## no prefix
       count: predicate.N
@@ -8130,9 +8130,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     MESH:
       MESH: object.MESH  ## no prefix
       count: predicate.N
@@ -8143,9 +8143,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     MESH-rev:
       MESH: subject.MESH  ## no prefix
       count: predicate.N
@@ -8156,9 +8156,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     UniProtKB:
       UniProtKB: object.UniProtKB  ## no prefix
       count: predicate.N
@@ -8169,9 +8169,9 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
     UniProtKB-rev:
       UniProtKB: subject.UniProtKB  ## no prefix
       count: predicate.N
@@ -8182,6 +8182,6 @@ components:
       qualifier: predicate.qualifier
       qualifier-label: predicate.qualifier_value
       provenance-url: predicate.provenance
-      original_subject: subject.id
-      original_predicate: predicate.relation
-      original_object: object.id
+      "biolink:original_subject": subject.id
+      "biolink:original_predicate": predicate.relation
+      "biolink:original_object": object.id
