@@ -898,7 +898,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: LOINC
@@ -1601,7 +1601,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","related_to","ClinicalFinding"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","related_to","ClinicalFinding"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: LOINC
@@ -2188,7 +2188,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: LOINC
@@ -2266,7 +2266,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: NCIT
@@ -2305,7 +2305,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: NCIT
@@ -2344,7 +2344,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: CHEBI
@@ -2422,7 +2422,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: "KEGG.COMPOUND"
@@ -2500,7 +2500,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: "PUBCHEM.COMPOUND"
@@ -2578,7 +2578,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: HMDB
@@ -2656,7 +2656,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: CAS
@@ -2736,7 +2736,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","Protein"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","Protein"]' ) }} ],
           "scopes": ["subject.NCIT", "predicate.type", "object.type"]}
       outputs:
       - id: UniProtKB
@@ -2932,7 +2932,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: CHEBI
@@ -3559,7 +3559,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: "KEGG.COMPOUND"
@@ -4811,7 +4811,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: "PUBCHEM.COMPOUND"
@@ -5515,7 +5515,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: HMDB
@@ -7329,7 +7329,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","Protein"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","correlated_with","Protein"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: UniProtKB
@@ -7955,7 +7955,7 @@ components:
       requestBodyType: object
       requestBody:  ## no prefix
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","related_to","Protein"]' ) }} ],
+          {"q": [ {{ queryInputs | rmPrefix() | wrap( '["', '","related_to","Protein"]' ) }} ],
           "scopes": ["object.NCIT", "predicate.type", "subject.type"]}
       outputs:
       - id: UniProtKB
