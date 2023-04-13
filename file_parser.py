@@ -125,11 +125,24 @@ def load_data(data_folder):
                     }
                 )
 
+            # sources
+            edge_sources = [
+                {
+                    "resource_id": attribute_source,
+                    "resource_role": "primary_knowledge_source"
+                },
+                {
+                    "resource_id": "infores:biothings-explorer",
+                    "resource_role": "aggregator_knowledge_source",
+                    "upstream_resource_ids": [ attribute_source ]
+                }
+            ]
 
-
+            
             association = {
                 "edge_label": line[1],
-                "edge_attributes": edge_attributes
+                "edge_attributes": edge_attributes,
+                "sources": edge_sources
             }
 
             # Yield subject, predicate, and object properties
