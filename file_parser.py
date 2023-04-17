@@ -3,6 +3,7 @@ import os
 import json
 
 attribute_source = "infores:biothings-multiomics-wellness"
+attribute_data_source = "infores:isb-wellness"
 
 correlation_statistic = {
     "Ridge regression coefficient": {
@@ -132,9 +133,8 @@ def load_data(data_folder):
                     "resource_role": "primary_knowledge_source"
                 },
                 {
-                    "resource_id": "infores:biothings-explorer",
-                    "resource_role": "aggregator_knowledge_source",
-                    "upstream_resource_ids": [ attribute_source ]
+                    "resource_id": attribute_data_source,
+                    "resource_role": "supporting_data_source"
                 }
             ]
 
