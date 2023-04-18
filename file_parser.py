@@ -10,13 +10,13 @@ correlation_statistic = {
         "attribute_type_id": "NCIT:C53237", # Regression Method -- http://purl.obolibrary.org/obo/NCIT_C53237
         "description": "Ridge regression coefficient was used to compute the value for the association",
         "value": "ENM:8000094",
-        "value_type_id": "biolink:id"
+        #"value_type_id": "biolink:id"
     },
     "Spearman Correlation": {
         "attribute_type_id": "NCIT:C53236", # Correlation Test -- http://purl.obolibrary.org/obo/NCIT_C53236
         "description": "Spearman Correlation Test was used to compute the p-value for the association",
         "value": "NCIT:C53249", # Spearman Correlation Test -- http://purl.obolibrary.org/obo/NCIT_C53249
-        "value_type_id": "biolink:id"
+        #"value_type_id": "biolink:id"
     }
 }
 
@@ -81,8 +81,8 @@ def load_data(data_folder):
             # strength_of_relationship
             edge_attributes.append(
                 {
-                    "attribute_type_id": "CURIE:strength_of_relationship", # ???
-                    "description": "Somehow related to Type_of_relationship", # ???
+                    "attribute_type_id": "STATO:0000085", # http://purl.obolibrary.org/obo/STATO_0000085
+                    "description": "Effect size estimate",
                     "value": float(line[9]),
                     #"value_type_id": "biolink:XXX" # ???
                 }
@@ -91,8 +91,8 @@ def load_data(data_folder):
             # relation
             edge_attributes.append(
                 {
-                    "attribute_type_id": line[6], # ???
-                    "description": "Predicate id", # ???
+                    "attribute_type_id": line[6],
+                    "description": "Predicate id",
                     "value": line[3],
                     #"value_type_id": "biolink:id" # ???
                 }
@@ -101,7 +101,7 @@ def load_data(data_folder):
             # N
             edge_attributes.append(
                 {
-                    "attribute_type_id": "GECKO:0000106", # ??? sample size - http://purl.obolibrary.org/obo/GECKO_0000106
+                    "attribute_type_id": "GECKO:0000106", # http://purl.obolibrary.org/obo/GECKO_0000106
                     "description": "Sample size used to compute the correlation", # ???
                     "value": int(float(line[7]))
                 }
@@ -110,8 +110,8 @@ def load_data(data_folder):
             # bonferroni_pval
             edge_attributes.append(
                 {
-                    "attribute_type_id": "NCIT:C61594", # ???
-                    "description": "Bonferroni pvalue", # ???
+                    "attribute_type_id": "NCIT:C61594",
+                    "description": "Bonferroni pvalue",
                     "value": float(line[13])
                 }
             )
@@ -124,8 +124,8 @@ def load_data(data_folder):
             if not(qualifier is None):
                 edge_attributes.append(
                     {
-                        "attribute_type_id": qualifier, # ???
-                        "description": domain, # ???
+                        "attribute_type_id": qualifier,
+                        "description": domain,
                         "value": qualifier_value,
                         #"value_type_id": "XXX ???" # ???
                     }
@@ -152,7 +152,7 @@ def load_data(data_folder):
 
             # Yield subject, predicate, and object properties
             data = {
-                "_id": '-'.join(['WKP',line[0], line[1], line[2], str(int(float(line[7]))), str(line[9])[:6], str(line[12])]),
+                "_id": '-'.join(['WKP', line[0], line[1], line[2], domain, qualifier_value]),
                 "subject": subject,
                 "association": association,
                 "object": object_
