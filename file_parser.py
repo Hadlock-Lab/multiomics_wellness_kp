@@ -67,8 +67,8 @@ def load_data(data_folder):
             if line[8] in correlation_statistic:
                 edge_attributes.append(correlation_statistic[line[8]])
             else:
-                print(line)
-                #raise Exception(f"Column 8 has unexpected value for type of statistic: {line[8]}")
+                #print(line)
+                raise Exception(f"Column 8 has unexpected value for type of statistic: {line[8]}")
 
             # TRAPI 1.3 style source
             edge_attributes.append(
