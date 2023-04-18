@@ -7,14 +7,12 @@ attribute_data_source = "infores:isb-wellness"
 
 correlation_statistic = {
     "Ridge regression coefficient": {
-        "attribute_source": attribute_source,
         "attribute_type_id": "NCIT:C53237", # Regression Method -- http://purl.obolibrary.org/obo/NCIT_C53237
         "description": "Ridge regression coefficient was used to compute the value for the association",
         "value": "ENM:8000094",
         "value_type_id": "biolink:id"
     },
     "Spearman Correlation": {
-        "attribute_source": attribute_source,
         "attribute_type_id": "NCIT:C53236", # Correlation Test -- http://purl.obolibrary.org/obo/NCIT_C53236
         "description": "Spearman Correlation Test was used to compute the p-value for the association",
         "value": "NCIT:C53249", # Spearman Correlation Test -- http://purl.obolibrary.org/obo/NCIT_C53249
@@ -25,8 +23,9 @@ correlation_statistic = {
 
 
 def load_data(data_folder):
-    edges_file_path = os.path.join(data_folder, "wellness_kg_edges_v1.6.tsv")
-    nodes_file_path = os.path.join(data_folder, "wellness_kg_nodes_v1.6.tsv")
+    edges_file_path = os.path.join(data_folder, "wellness_kg_edges_v1.7.tsv")
+    #edges_file_path = os.path.join(data_folder, "short_edges.tsv")
+    nodes_file_path = os.path.join(data_folder, "wellness_kg_nodes_v1.7.tsv")
     nodes_f = open(nodes_file_path)
     edges_f = open(edges_file_path)
     nodes_data = csv.reader(nodes_f, delimiter="\t")
@@ -59,6 +58,7 @@ def load_data(data_folder):
                 "type": id_type_mapping[line[2]]
             }
 
+
             # properties for predicate/association
             edge_attributes = []
 
@@ -67,34 +67,40 @@ def load_data(data_folder):
             if line[8] in correlation_statistic:
                 edge_attributes.append(correlation_statistic[line[8]])
             else:
-                raise Exception(f"Column 8 has unexpected value {line[8]}")
+                print(line)
+                #raise Exception(f"Column 8 has unexpected value for type of statistic: {line[8]}")
+
+            # TRAPI 1.3 style source
+            edge_attributes.append(
+                {
+                    "attribute_type_id": "biolink:primary_knowledge_source",
+                    "value": attribute_source
+                }
+            )
 
             # strength_of_relationship
             edge_attributes.append(
                 {
-                    "attribute_source": attribute_source,
                     "attribute_type_id": "CURIE:strength_of_relationship", # ???
                     "description": "Somehow related to Type_of_relationship", # ???
                     "value": float(line[9]),
-                    "value_type_id": "biolink:XXX" # ???
+                    #"value_type_id": "biolink:XXX" # ???
                 }
             )
 
             # relation
             edge_attributes.append(
                 {
-                    "attribute_source": attribute_source,
                     "attribute_type_id": line[6], # ???
-                    "description": "Predicate id?", # ???
+                    "description": "Predicate id", # ???
                     "value": line[3],
-                    "value_type_id": "biolink:id" # ???
+                    #"value_type_id": "biolink:id" # ???
                 }
             )
 
             # N
             edge_attributes.append(
                 {
-                    "attribute_source": attribute_source,
                     "attribute_type_id": "GECKO:0000106", # ??? sample size - http://purl.obolibrary.org/obo/GECKO_0000106
                     "description": "Sample size used to compute the correlation", # ???
                     "value": int(float(line[7]))
@@ -104,44 +110,43 @@ def load_data(data_folder):
             # bonferroni_pval
             edge_attributes.append(
                 {
-                    "attribute_source": attribute_source,
                     "attribute_type_id": "NCIT:C61594", # ???
-                    "description": "Bonferroni pval XXX", # ???
-                    "value": float(line[12])
+                    "description": "Bonferroni pvalue", # ???
+                    "value": float(line[13])
                 }
             )
 
 
             # Add qualifier, if available
-            qualifier = None if (line[10] == '' or line[10] == 'nan') else line[10]
-            qualifier_value = None if (line[11] == '' or line[11] == 'nan') else line[11]
+            domain = None if (line[10] == '' or line[10] == 'nan') else line[10]
+            qualifier = None if (line[11] == '' or line[11] == 'nan') else line[11]
+            qualifier_value = None if (line[12] == '' or line[12] == 'nan') else line[12]
             if not(qualifier is None):
                 edge_attributes.append(
                     {
-                        "attribute_source": attribute_source,
                         "attribute_type_id": qualifier, # ???
-                        "description": "qualifier XXX", # ???
+                        "description": domain, # ???
                         "value": qualifier_value,
-                        "value_type_id": "XXX ???" # ??? 
+                        #"value_type_id": "XXX ???" # ???
                     }
                 )
 
-            # sources
+            # sources - TRAPI 1.4 style
             edge_sources = [
                 {
                     "resource_id": attribute_source,
-                    "resource_role": "primary_knowledge_source"
+                    "resource_role": "biolink:primary_knowledge_source"
                 },
                 {
                     "resource_id": attribute_data_source,
-                    "resource_role": "supporting_data_source"
+                    "resource_role": "biolink:supporting_data_source"
                 }
             ]
 
-            
+
             association = {
-                "edge_label": line[1],
-                "edge_attributes": edge_attributes,
+                "label": line[1],
+                "attributes": edge_attributes,
                 "sources": edge_sources
             }
 
@@ -160,13 +165,15 @@ def load_data(data_folder):
 
 
 def main():
-    write_top_ten = True
-    if (write_top_ten):
-        gen = load_data('test')
-        for x in range(0, 10):
-            print(json.dumps(next(gen), sort_keys=True, indent=2))
-    else:
-        [_ for _ in load_data('test')]
+    testing = False #True
+    done = 0
+    gen = load_data('test')
+    while not testing or done < 10:
+        try: entry = next(gen)
+        except: break
+        else:
+            print(json.dumps(entry, sort_keys=True, indent=2))
+            done = done + 1
 
 
 if __name__ == '__main__':
