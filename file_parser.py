@@ -135,11 +135,11 @@ def load_data(data_folder):
             edge_sources = [
                 {
                     "resource_id": attribute_source,
-                    "resource_role": "biolink:primary_knowledge_source"
+                    "resource_role": "primary_knowledge_source"
                 },
                 {
                     "resource_id": attribute_data_source,
-                    "resource_role": "biolink:supporting_data_source"
+                    "resource_role": "supporting_data_source"
                 }
             ]
 
