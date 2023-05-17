@@ -24,7 +24,6 @@ correlation_statistic = {
 
 def load_data(data_folder):
     edges_file_path = os.path.join(data_folder, "wellness_kg_edges_v1.7.tsv")
-    #edges_file_path = os.path.join(data_folder, "short_edges.tsv")
     nodes_file_path = os.path.join(data_folder, "wellness_kg_nodes_v1.7.tsv")
     nodes_f = open(nodes_file_path)
     edges_f = open(edges_file_path)
@@ -152,7 +151,7 @@ def load_data(data_folder):
 
             # Yield subject, predicate, and object properties
             data = {
-                "_id": '-'.join(['WKP', line[0], line[1], line[2], domain, qualifier_value]),
+                "_id": '-'.join(['WKP', line[0], line[1], line[2], domain, qualifier_value]).replace(" ","_"),
                 "subject": subject,
                 "association": association,
                 "object": object_
