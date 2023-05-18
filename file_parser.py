@@ -151,7 +151,7 @@ def load_data(data_folder):
 
             # Yield subject, predicate, and object properties
             data = {
-                "_id": '-'.join(['WKP', line[0], line[1], line[2], domain, qualifier_value]).replace(" ","_"),
+                "_id": '-'.join(['WKP', line[0], line[1], line[2], str(domain), str(qualifier_value)]).replace(" ","_"),
                 "subject": subject,
                 "association": association,
                 "object": object_
