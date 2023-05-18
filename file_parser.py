@@ -82,7 +82,7 @@ def load_data(data_folder):
                 {
                     "attribute_type_id": "STATO:0000085", # http://purl.obolibrary.org/obo/STATO_0000085
                     "description": "Effect size estimate",
-                    "value": float(line[9]),
+                    "value": line[9] ## float
                     #"value_type_id": "biolink:XXX" # ???
                 }
             )
@@ -102,7 +102,7 @@ def load_data(data_folder):
                 {
                     "attribute_type_id": "GECKO:0000106", # http://purl.obolibrary.org/obo/GECKO_0000106
                     "description": "Sample size used to compute the correlation", # ???
-                    "value": int(float(line[7]))
+                    "value": line[7] ## int(float())
                 }
             )
 
@@ -111,7 +111,7 @@ def load_data(data_folder):
                 {
                     "attribute_type_id": "NCIT:C61594",
                     "description": "Bonferroni pvalue",
-                    "value": float(line[13])
+                    "value": line[13]  ## float
                 }
             )
 
@@ -173,7 +173,8 @@ def main():
         else:
             print(json.dumps(entry, sort_keys=True, indent=2))
             done = done + 1
-
+    #print(done)
 
 if __name__ == '__main__':
     main()
+    
