@@ -1184,10 +1184,9 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/HMDB'
-      # source: 'Multiomics Provider: Wellness'
       # testExamples:
-      #   - qInput: "LOINC:1742-6"        ## ALAT (SGPT)
-      #     oneOutput: "HMDB:HMDB00532"   ## N-acetylglycine
+      #   - qInput: "LOINC:13457-7"        ## LDL-CHOL CALCULATION
+      #     oneOutput: "HMDB:HMDB07218"    ## oleoyl-oleoyl-glycerol (18:1/18:1) [2]*
     LOINC-HMDB-Rev:
     - supportBatch: true
       useTemplating: True
@@ -1212,10 +1211,9 @@ components:
       predicate: correlated_with
       response_mapping:
         $ref: '#/components/x-bte-response-mapping/LOINC-rev'
-      # source: 'Multiomics Provider: Wellness'
       # testExamples:
-      #   - qInput: "HMDB:HMDB00532"   ## N-acetylglycine
-      #     oneOutput: "LOINC:1742-6"            ## ALAT (SGPT)
+      #   - qInput: "HMDB:HMDB12103"       ## behenoyl sphingomyelin (d18:1/22:0)*
+      #     oneOutput: "LOINC:13457-7"     ## LDL-CHOL CALCULATION
     LOINC-CAS:
     ## https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:correlated_with AND object.type:MolecularEntity AND _exists_:object.CAS
     - supportBatch: true
