@@ -8516,20 +8516,10 @@ components:
       "biolink:original_predicate": predicate.relation
       "biolink:original_object": object.id
     HMDB:
-      HMDB: object.HMDB  ## no prefix
+      HMDB: object.HMDB
       input_name: subject.name
       output_name: object.name
-      count: predicate.N
-      bonferroni_pval: predicate.bonferroni_pval
-      weighted_pvalue: predicate.weighted_pvalue
-      strength_of_relationship: predicate.strength_of_relationship
-      method: predicate.type_of_relationship
-      qualifier: predicate.qualifier
-      qualifier-label: predicate.qualifier_value
-      provenance-url: predicate.provenance
-      "biolink:original_subject": subject.id
-      "biolink:original_predicate": predicate.relation
-      "biolink:original_object": object.id
+      edge-attributes: association.attributes
     HMDB-rev:
       HMDB: subject.HMDB  ## no prefix
       input_name: object.name  ## NOTE THE REVERSAL
