@@ -1174,21 +1174,11 @@ components:
       outputs:
       - id: HMDB
         semantic: SmallMolecule
-      parameters:   ## no prefix
+      parameters:
         fields: >-
           object.HMDB,
-          predicate.N,
-          predicate.bonferroni_pval,
-          predicate.weighted_pvalue,
-          predicate.strength_of_relationship,
-          predicate.type_of_relationship,
-          predicate.qualifier,
-          predicate.qualifier_value,
-          predicate.provenance,
-          subject.id,
+          association.attributes,
           subject.name,
-          predicate.relation,
-          object.id,
           object.name
         size: 1000
       predicate: correlated_with
