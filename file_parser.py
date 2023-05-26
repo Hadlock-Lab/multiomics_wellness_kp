@@ -41,7 +41,7 @@ def load_data(data_folder):
     for line in edges_data:
         if line[0] and line[1] and line[0].split(':')[0] and line[2].split(':')[0]:
 
-            prefix = line[0].split(':')[0]
+            prefix = line[0].split(':')[0].replace(".","_")
             subject = {
                 "id": line[0],
                 prefix: line[0],
@@ -49,7 +49,7 @@ def load_data(data_folder):
                 "type": id_type_mapping[line[0]]
             }
 
-            prefix = line[2].split(':')[0]
+            prefix = line[2].split(':')[0].replace(".","_")
             object_ = {
                 "id": line[2],
                 prefix: line[2],
