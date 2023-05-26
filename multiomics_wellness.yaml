@@ -1160,7 +1160,7 @@ components:
       #   - qInput: "PUBCHEM.COMPOUND:5283573"   ## N-stearoyl-sphinganine (d18:0/18:0)*
       #     oneOutput: "LOINC:1742-6"            ## ALAT (SGPT)
     LOINC-HMDB:
-    ## https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:correlated_with AND object.type:MolecularEntity AND _exists_:object.HMDB
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.HMDB
     - supportBatch: true
       useTemplating: True
       inputs:
