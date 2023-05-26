@@ -1167,10 +1167,10 @@ components:
       - id: LOINC
         semantic: ClinicalFinding
       requestBodyType: object
-      requestBody:   ## no prefix
+      requestBody:
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","MolecularEntity"]' ) }} ],
-          "scopes": ["subject.LOINC", "predicate.type", "object.type"]}
+          {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+          "scopes": ["subject.LOINC", "object.type"]}
       outputs:
       - id: HMDB
         semantic: SmallMolecule
