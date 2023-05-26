@@ -1189,35 +1189,24 @@ components:
       #   - qInput: "LOINC:1742-6"        ## ALAT (SGPT)
       #     oneOutput: "HMDB:HMDB00532"   ## N-acetylglycine
     LOINC-HMDB-Rev:
-    ## https://pending.biothings.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND predicate.type:correlated_with AND object.type:MolecularEntity AND _exists_:object.HMDB
     - supportBatch: true
       useTemplating: True
       inputs:
       - id: HMDB
         semantic: SmallMolecule
       requestBodyType: object
-      requestBody:  ## no prefix
+      requestBody:
         body: >-
-          {"q": [ {{ queryInputs | wrap( '["', '","correlated_with","ClinicalFinding"]' ) }} ],
-          "scopes": ["object.HMDB", "predicate.type", "subject.type"]}
+          {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+          "scopes": ["object.HMDB", "subject.type"]}
       outputs:
       - id: LOINC
         semantic: ClinicalFinding
       parameters:  ## no prefix
         fields: >-
           subject.LOINC,
-          predicate.N,
-          predicate.bonferroni_pval,
-          predicate.weighted_pvalue,
-          predicate.strength_of_relationship,
-          predicate.type_of_relationship,
-          predicate.qualifier,
-          predicate.qualifier_value,
-          predicate.provenance,
-          subject.id,
+          association.attributes,
           subject.name,
-          predicate.relation,
-          object.id,
           object.name
         size: 1000
       predicate: correlated_with
@@ -8381,20 +8370,10 @@ components:
       "biolink:original_predicate": predicate.relation
       "biolink:original_object": object.id
     LOINC-rev:
-      LOINC: subject.LOINC  ## no prefix
+      LOINC: subject.LOINC
       input_name: object.name  ## NOTE THE REVERSAL
       output_name: subject.name 
-      count: predicate.N
-      bonferroni_pval: predicate.bonferroni_pval
-      weighted_pvalue: predicate.weighted_pvalue
-      strength_of_relationship: predicate.strength_of_relationship
-      method: predicate.type_of_relationship
-      qualifier: predicate.qualifier
-      qualifier-label: predicate.qualifier_value
-      provenance-url: predicate.provenance
-      "biolink:original_subject": subject.id
-      "biolink:original_predicate": predicate.relation
-      "biolink:original_object": object.id
+      edge-attributes: association.attributes
     NCIT:
       NCIT: object.NCIT  ## no prefix
       input_name: subject.name
