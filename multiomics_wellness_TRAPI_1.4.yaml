@@ -3009,8 +3009,8 @@ paths:
           application/json:
             example:
               ids:
-                - KEGG.COMPOUND:C14829-biolink:correlated_with-LOINC:44733-4-915--0.298-2.58720580594939e-20
-                - KEGG.COMPOUND:C03771-biolink:correlated_with-CAS:222403-67-0-1253--0.198-1.38700513475056e-12
+                - WKP-LOINC:1751-7-biolink:correlated_with-LOINC:1759-0-None-None
+                - WKP-LOINC:1759-0-biolink:correlated_with-LOINC:1975-2-None-None
             schema:
               type: object
               properties:
@@ -3025,7 +3025,7 @@ paths:
   '/association/{id}':
     get:
       parameters:
-        - example: KEGG.COMPOUND:C14829-biolink:correlated_with-LOINC:44733-4-915--0.298-2.58720580594939e-20
+        - example: WKP-LOINC:1751-7-biolink:correlated_with-LOINC:1759-0-None-None
           required: true
           in: path
           name: id
@@ -3086,8 +3086,8 @@ paths:
               scopes:
                 - subject.id
               q:
-                - KEGG.COMPOUND:C11332
-                - KEGG.COMPOUND:C05565
+                - LOINC:1751-7
+                - LOINC:1759-0
             schema:
               type: object
               properties:
@@ -3218,7 +3218,7 @@ paths:
         - query
     get:
       parameters:
-        - example: subject.id:"KEGG.COMPOUND:C11332"
+        - example: subject.id:"LOINC:1751-7"
           required: true
           in: query
           name: q
