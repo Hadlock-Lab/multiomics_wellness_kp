@@ -1,6 +1,7 @@
 ---
 info:
   x-translator:
+    infores: "infores:biothings-multiomics-wellness"
     component: KP
     biolink-version: '3.1.1'
     team:
