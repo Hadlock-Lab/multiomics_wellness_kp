@@ -1,18 +1,18 @@
 ---
 info:
   x-translator:
-    infores: infores:biothings-multiomics-wellness
+    infores: "infores:biothings-multiomics-wellness"
     component: KP
-    biolink-version: 2.2.13
+    biolink-version: '3.1.1'
     team:
       - Multiomics Provider
       - Service Provider
-  version: 1.7
+  version: '1.7'
   title: Multiomics Wellness KP API
   termsOfService: https://biothings.io/about
   contact:
-    email: help@biothings.io
-    name: BioThings Team
+    email: gglusman@isbscience.org
+    name: Gwenlyn Glusman
     x-role: responsible developers
     x-id: https://github.com/biothings
   description: Documentation of the BioThings API for Translator Multiomics Team's  Wellness KP.
@@ -32,7 +32,7 @@ components:
       schema:
         default: false
         type: boolean
-      description: 'Optional, can be used to control the format of the returned chemical object.  If "dotfield" is true, the returned data object is returned flattened (no nested objects)  using dotfield notation for key names. Default: false.'
+      description: 'Optional, can be used to control the format of the returned object.  If "dotfield" is true, the returned data object is returned flattened (no nested objects)  using dotfield notation for key names. Default: false.'
     facet_size:
       required: false
       in: query
@@ -48,7 +48,7 @@ components:
       schema:
         default: 10
         type: integer
-      description: 'Optional, the maximum number of matching chemical hits to return (with a cap of 1000 at the moment). Default: 10. The combination of "size" and "from" parameters can be used to get paging for a large query.'
+      description: 'Optional, the maximum number of matching hits to return (with a cap of 1000 at the moment). Default: 10. The combination of "size" and "from" parameters can be used to get paging for a large query.'
     email:
       required: false
       in: query
@@ -81,7 +81,7 @@ components:
         default: all
         type: string
       description: >-
-        Optional, can be a comma-separated list to limit the fields returned from the chemical object.  If "fields=all", all available fields will be returned.
+        Optional, can be a comma-separated list to limit the fields returned from the object.  If "fields=all", all available fields will be returned.
         
         Note that it supports dot notation as well, e.g., you can pass "chebi.name".  Default: "fields=all".  The parameter "filter" is an alias for this parameter.
     callback:
@@ -98,7 +98,7 @@ components:
       schema:
         default: 0
         type: integer
-      description: 'Optional, the number of matching chemical hits to skip, starting from 0. Default: 0. '
+      description: 'Optional, the number of matching hits to skip, starting from 0. Default: 0. '
     facets:
       required: false
       in: query
@@ -112,207 +112,207 @@ components:
     EFO:
       EFO: object.EFO
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     NCIT:
       output_name: object.name
       NCIT: object.NCIT
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     UniProtKB-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       UniProtKB: subject.UniProtKB
       trapi_sources: association.sources
     CAS-rev:
       CAS: subject.CAS
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     HMDB-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
       HMDB: subject.HMDB
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     MESH-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
       MESH: subject.MESH
     CHEBI:
       output_name: object.name
-      edge_attributes: association.attributes
       CHEBI: object.CHEBI
       input_name: subject.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     PUBCHEM_COMPOUND-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       PUBCHEM_COMPOUND: subject.PUBCHEM_COMPOUND
       trapi_sources: association.sources
     HMDB:
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
       HMDB: object.HMDB
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     UMLS:
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
       UMLS: object.UMLS
     LOINC-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
       LOINC: subject.LOINC
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     CAS:
       CAS: object.CAS
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     LOINC:
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
       LOINC: object.LOINC
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     KEGG_COMPOUND-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
       KEGG_COMPOUND: subject.KEGG_COMPOUND
     UMLS-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
       UMLS: subject.UMLS
     EFO-rev:
       EFO: subject.EFO
       output_name: subject.name
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     NCIT-rev:
       output_name: subject.name
       NCIT: subject.NCIT
-      edge_attributes: association.attributes
       input_name: object.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     CHEBI-rev:
       output_name: subject.name
-      edge_attributes: association.attributes
       CHEBI: subject.CHEBI
       input_name: object.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
     PUBCHEM_COMPOUND:
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       PUBCHEM_COMPOUND: object.PUBCHEM_COMPOUND
       trapi_sources: association.sources
     UniProtKB:
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       UniProtKB: object.UniProtKB
       trapi_sources: association.sources
     MESH:
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
       MESH: object.MESH
     KEGG_COMPOUND:
       output_name: object.name
-      edge_attributes: association.attributes
       input_name: subject.name
+      edge-attributes: association.attributes
       trapi_sources: association.sources
       KEGG_COMPOUND: object.KEGG_COMPOUND
   x-bte-kgs-operations:
     CAS-CHEBI-Rev:
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.CAS,
+            subject.CAS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
+          $ref: '#/components/x-bte-response-mapping/CAS-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
+            "scopes": ["object.CHEBI", "subject.type"]}
     PUBCHEM_COMPOUND-PUBCHEM_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.PUBCHEM_COMPOUND,
+            subject.PUBCHEM_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND-rev'
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
     UniProtKB-HMDB:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.HMDB
       - useTemplating: True
         outputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: HMDB
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: UniProtKB
+            semantic: Protein
         parameters:
           fields: >-
             object.HMDB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
+          $ref: '#/components/x-bte-response-mapping/HMDB'
         supportBatch: True
         requestBody:
           body: >-
@@ -321,23 +321,23 @@ components:
     NCIT-KEGG_COMPOUND:
       - useTemplating: True
         outputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.KEGG_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -346,42 +346,68 @@ components:
     NCIT-NCIT-Rev:
       - useTemplating: True
         outputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         parameters:
           fields: >-
-            object.NCIT,
+            subject.NCIT,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.NCIT", "object.type"]}
+            "scopes": ["object.NCIT", "subject.type"]}
     CAS-EFO-Rev:
       - useTemplating: True
         outputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.CAS,
+            subject.CAS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CAS-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.EFO", "subject.type"]}
+    UniProtKB-EFO:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.EFO
+      - useTemplating: True
+        outputs:
+          - id: EFO
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: UniProtKB
+            semantic: Protein
+        parameters:
+          fields: >-
+            object.EFO,
+            association.attributes,
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -391,99 +417,73 @@ components:
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
-    UniProtKB-EFO:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.EFO
-      - useTemplating: True
-        outputs:
-          id: UniProtKB
-          semantic: Protein
-        requestBodyType: object
-        inputs:
-          id: UniProtKB
-          semantic: Protein
-        parameters:
-          fields: >-
-            object.EFO,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
-        supportBatch: True
-        requestBody:
-          body: >-
             {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
             "scopes": ["subject.UniProtKB", "object.type"]}
     UniProtKB-UniProtKB-Rev:
       - useTemplating: True
         outputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: UniProtKB
+            semantic: Protein
         parameters:
           fields: >-
-            object.UniProtKB,
+            subject.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.UniProtKB", "object.type"]}
+            "scopes": ["object.UniProtKB", "subject.type"]}
     CHEBI-UMLS-Rev:
       - useTemplating: True
         outputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: UMLS
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.CHEBI,
+            subject.CHEBI,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UMLS'
+          $ref: '#/components/x-bte-response-mapping/CHEBI-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
+            "scopes": ["object.UMLS", "subject.type"]}
     CHEBI-CHEBI:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CHEBI AND _exists_:object.CHEBI
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.CHEBI,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -498,48 +498,48 @@ components:
     CAS-UMLS-Rev:
       - useTemplating: True
         outputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: UMLS
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.CAS,
+            subject.CAS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UMLS'
+          $ref: '#/components/x-bte-response-mapping/CAS-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
+            "scopes": ["object.UMLS", "subject.type"]}
     CAS-KEGG_COMPOUND:
       - useTemplating: True
         outputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.KEGG_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -549,524 +549,17 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CHEBI AND _exists_:object.HMDB
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.HMDB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
-    UniProtKB-KEGG_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: UniProtKB
-          semantic: Protein
-        requestBodyType: object
-        inputs:
-          id: UniProtKB
-          semantic: Protein
-        parameters:
-          fields: >-
-            object.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UniProtKB", "object.type"]}
-    CHEBI-CHEBI-Rev:
-      - useTemplating: True
-        outputs:
-          id: CHEBI
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CHEBI
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CHEBI,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
-    EFO-KEGG_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.EFO,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    KEGG_COMPOUND-PUBCHEM_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.PUBCHEM_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    LOINC-NCIT-Rev:
-      - useTemplating: True
-        outputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.LOINC,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.NCIT", "object.type"]}
-    NCIT-EFO:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.EFO
-      - useTemplating: True
-        outputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.EFO,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.NCIT", "object.type"]}
-    CHEBI-UMLS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CHEBI AND _exists_:object.UMLS
-      - useTemplating: True
-        outputs:
-          id: CHEBI
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CHEBI
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.UMLS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
-    NCIT-UniProtKB-Rev:
-      - useTemplating: True
-        outputs:
-          id: UniProtKB
-          semantic: Protein
-        requestBodyType: object
-        inputs:
-          id: UniProtKB
-          semantic: Protein
-        parameters:
-          fields: >-
-            object.NCIT,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.UniProtKB", "object.type"]}
-    LOINC-HMDB:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.HMDB
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.HMDB,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    EFO-EFO-Rev:
-      - useTemplating: True
-        outputs:
-          id: EFO
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: EFO
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.EFO,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
-    LOINC-CAS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.CAS
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.CAS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    LOINC-CAS-Rev:
-      - useTemplating: True
-        outputs:
-          id: CAS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CAS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.LOINC,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
-    NCIT-PUBCHEM_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.PUBCHEM_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.NCIT", "object.type"]}
-    CAS-UMLS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.UMLS
-      - useTemplating: True
-        outputs:
-          id: CAS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CAS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.UMLS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
-    CAS-HMDB:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.HMDB
-      - useTemplating: True
-        outputs:
-          id: CAS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CAS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.HMDB,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
-    HMDB-PUBCHEM_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.HMDB,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
-    CAS-KEGG_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CAS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    NCIT-CHEBI:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.CHEBI
-      - useTemplating: True
-        outputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: NCIT
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.CHEBI,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.NCIT", "object.type"]}
-    KEGG_COMPOUND-KEGG_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    CHEBI-HMDB-Rev:
-      - useTemplating: True
-        outputs:
-          id: HMDB
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: HMDB
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CHEBI,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1076,29 +569,536 @@ components:
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.HMDB", "object.type"]}
-    LOINC-NCIT:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.NCIT
+            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.CHEBI", "object.type"]}
+    UniProtKB-KEGG_COMPOUND:
       - useTemplating: True
         outputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: UniProtKB
+            semantic: Protein
         parameters:
           fields: >-
-            object.NCIT,
+            object.KEGG_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.UniProtKB", "object.type"]}
+    CHEBI-CHEBI-Rev:
+      - useTemplating: True
+        outputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.CHEBI,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CHEBI-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.CHEBI", "subject.type"]}
+    EFO-KEGG_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: EFO
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.EFO,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
+    KEGG_COMPOUND-PUBCHEM_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.PUBCHEM_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
+    LOINC-NCIT-Rev:
+      - useTemplating: True
+        outputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            subject.LOINC,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.NCIT", "subject.type"]}
+    NCIT-EFO:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.EFO
+      - useTemplating: True
+        outputs:
+          - id: EFO
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.EFO,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.NCIT", "object.type"]}
+    CHEBI-UMLS:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CHEBI AND _exists_:object.UMLS
+      - useTemplating: True
+        outputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.UMLS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/UMLS'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.CHEBI", "object.type"]}
+    NCIT-UniProtKB-Rev:
+      - useTemplating: True
+        outputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: UniProtKB
+            semantic: Protein
+        parameters:
+          fields: >-
+            subject.NCIT,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.UniProtKB", "subject.type"]}
+    LOINC-HMDB:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.HMDB
+      - useTemplating: True
+        outputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.HMDB,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/HMDB'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.LOINC", "object.type"]}
+    EFO-EFO-Rev:
+      - useTemplating: True
+        outputs:
+          - id: EFO
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: EFO
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.EFO,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.EFO", "subject.type"]}
+    LOINC-CAS:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.CAS
+      - useTemplating: True
+        outputs:
+          - id: CAS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.CAS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CAS'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.LOINC", "object.type"]}
+    LOINC-CAS-Rev:
+      - useTemplating: True
+        outputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: CAS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.LOINC,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.CAS", "subject.type"]}
+    NCIT-PUBCHEM_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.PUBCHEM_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.NCIT", "object.type"]}
+    CAS-UMLS:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.UMLS
+      - useTemplating: True
+        outputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: CAS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.UMLS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/UMLS'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.CAS", "object.type"]}
+    CAS-HMDB:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.HMDB
+      - useTemplating: True
+        outputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: CAS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.HMDB,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/HMDB'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.CAS", "object.type"]}
+    HMDB-PUBCHEM_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.HMDB,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/HMDB-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
+    CAS-KEGG_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: CAS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.CAS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CAS-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
+    NCIT-CHEBI:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.CHEBI
+      - useTemplating: True
+        outputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.CHEBI,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CHEBI'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.NCIT", "object.type"]}
+    KEGG_COMPOUND-KEGG_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.KEGG_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
+    CHEBI-HMDB-Rev:
+      - useTemplating: True
+        outputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.CHEBI,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CHEBI-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.HMDB", "subject.type"]}
+    LOINC-NCIT:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.NCIT
+      - useTemplating: True
+        outputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.NCIT,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/NCIT'
         supportBatch: True
         requestBody:
           body: >-
@@ -1108,17 +1108,17 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.CAS
       - useTemplating: True
         outputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.CAS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1134,23 +1134,23 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.UniProtKB
       - useTemplating: True
         outputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB'
         supportBatch: True
         requestBody:
           body: >-
@@ -1159,118 +1159,118 @@ components:
     HMDB-KEGG_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.HMDB,
+            subject.HMDB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
+          $ref: '#/components/x-bte-response-mapping/HMDB-rev'
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
     LOINC-PUBCHEM_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: LOINC
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.LOINC,
+            subject.LOINC,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
     NCIT-CAS-Rev:
       - useTemplating: True
         outputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: NCIT
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.NCIT,
+            subject.NCIT,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
+            "scopes": ["object.CAS", "subject.type"]}
     HMDB-HMDB-Rev:
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.HMDB,
+            subject.HMDB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/HMDB'
+          $ref: '#/components/x-bte-response-mapping/HMDB-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.HMDB", "object.type"]}
+            "scopes": ["object.HMDB", "subject.type"]}
     UniProtKB-UniProtKB:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.UniProtKB
       - useTemplating: True
         outputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: UniProtKB
+            semantic: Protein
         parameters:
           fields: >-
             object.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1285,17 +1285,43 @@ components:
     EFO-UMLS-Rev:
       - useTemplating: True
         outputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: UMLS
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.EFO,
+            subject.EFO,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.UMLS", "subject.type"]}
+    EFO-UMLS:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.EFO AND _exists_:object.UMLS
+      - useTemplating: True
+        outputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: EFO
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.UMLS,
+            association.attributes,
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1305,105 +1331,79 @@ components:
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
-    EFO-UMLS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.EFO AND _exists_:object.UMLS
-      - useTemplating: True
-        outputs:
-          id: EFO
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: EFO
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.UMLS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
-        supportBatch: True
-        requestBody:
-          body: >-
             {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
             "scopes": ["subject.EFO", "object.type"]}
     EFO-HMDB-Rev:
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.EFO,
+            subject.EFO,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.HMDB", "subject.type"]}
+    UniProtKB-CAS-Rev:
+      - useTemplating: True
+        outputs:
+          - id: UniProtKB
+            semantic: Protein
+        requestBodyType: object
+        inputs:
+          - id: CAS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.UniProtKB,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:Protein"]' ) }} ],
+            "scopes": ["object.CAS", "subject.type"]}
+    EFO-HMDB:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.EFO AND _exists_:object.HMDB
+      - useTemplating: True
+        outputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: EFO
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.HMDB,
+            association.attributes,
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
           $ref: '#/components/x-bte-response-mapping/HMDB'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.HMDB", "object.type"]}
-    UniProtKB-CAS-Rev:
-      - useTemplating: True
-        outputs:
-          id: CAS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CAS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.UniProtKB,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
-    EFO-HMDB:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.EFO AND _exists_:object.HMDB
-      - useTemplating: True
-        outputs:
-          id: EFO
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: EFO
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.HMDB,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
         supportBatch: True
         requestBody:
           body: >-
@@ -1412,23 +1412,23 @@ components:
     CAS-PUBCHEM_COMPOUND:
       - useTemplating: True
         outputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CAS
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.PUBCHEM_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -1437,42 +1437,267 @@ components:
     UniProtKB-HMDB-Rev:
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.UniProtKB,
+            subject.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/HMDB'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.HMDB", "object.type"]}
+            "scopes": ["object.HMDB", "subject.type"]}
     UniProtKB-KEGG_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.UniProtKB,
+            subject.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:Protein"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
+    LOINC-MESH-Rev:
+      - useTemplating: True
+        outputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: MESH
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            subject.LOINC,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('MESH') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.MESH", "subject.type"]}
+    NCIT-EFO-Rev:
+      - useTemplating: True
+        outputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: EFO
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.NCIT,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.EFO", "subject.type"]}
+    KEGG_COMPOUND-PUBCHEM_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.KEGG_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
+    EFO-PUBCHEM_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: EFO
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.PUBCHEM_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.EFO", "object.type"]}
+    EFO-PUBCHEM_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: EFO
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.EFO,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
+    HMDB-UMLS-Rev:
+      - useTemplating: True
+        outputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.HMDB,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/HMDB-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.UMLS", "subject.type"]}
+    CAS-CAS-Rev:
+      - useTemplating: True
+        outputs:
+          - id: CAS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: CAS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.CAS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CAS-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.CAS", "subject.type"]}
+    LOINC-LOINC-Rev:
+      - useTemplating: True
+        outputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            subject.LOINC,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.LOINC", "subject.type"]}
+    LOINC-KEGG_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.KEGG_COMPOUND,
+            association.attributes,
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1482,273 +1707,48 @@ components:
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    LOINC-MESH-Rev:
-      - useTemplating: True
-        outputs:
-          id: MESH
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: MESH
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.LOINC,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/MESH'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('MESH') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.MESH", "object.type"]}
-    NCIT-EFO-Rev:
-      - useTemplating: True
-        outputs:
-          id: EFO
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: EFO
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.NCIT,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
-    KEGG_COMPOUND-PUBCHEM_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
-    EFO-PUBCHEM_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: EFO
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: EFO
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.PUBCHEM_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
-    EFO-PUBCHEM_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.EFO,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
-    HMDB-UMLS-Rev:
-      - useTemplating: True
-        outputs:
-          id: UMLS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: UMLS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.HMDB,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UMLS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
-    CAS-CAS-Rev:
-      - useTemplating: True
-        outputs:
-          id: CAS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CAS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CAS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
-    LOINC-LOINC-Rev:
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.LOINC,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    LOINC-KEGG_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
             {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
             "scopes": ["subject.LOINC", "object.type"]}
     NCIT-PUBCHEM_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: NCIT
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.NCIT,
+            subject.NCIT,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
     NCIT-NCIT:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.NCIT
       - useTemplating: True
         outputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.NCIT,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1764,23 +1764,23 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.CAS
       - useTemplating: True
         outputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: CAS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.CAS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
+          $ref: '#/components/x-bte-response-mapping/CAS'
         supportBatch: True
         requestBody:
           body: >-
@@ -1790,92 +1790,17 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.CHEBI
       - useTemplating: True
         outputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: CHEBI
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: LOINC
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.CHEBI,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    LOINC-EFO-Rev:
-      - useTemplating: True
-        outputs:
-          id: EFO
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: EFO
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.LOINC,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
-    LOINC-PUBCHEM_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.PUBCHEM_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    LOINC-CHEBI-Rev:
-      - useTemplating: True
-        outputs:
-          id: CHEBI
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CHEBI
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.LOINC,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1885,23 +1810,98 @@ components:
         supportBatch: True
         requestBody:
           body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.LOINC", "object.type"]}
+    LOINC-EFO-Rev:
+      - useTemplating: True
+        outputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: EFO
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.LOINC,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.EFO", "subject.type"]}
+    LOINC-PUBCHEM_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.PUBCHEM_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.LOINC", "object.type"]}
+    LOINC-CHEBI-Rev:
+      - useTemplating: True
+        outputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.LOINC,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
             {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
+            "scopes": ["object.CHEBI", "subject.type"]}
     EFO-EFO:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.EFO AND _exists_:object.EFO
       - useTemplating: True
         outputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.EFO,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -1916,23 +1916,23 @@ components:
     CHEBI-KEGG_COMPOUND:
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.KEGG_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -1941,117 +1941,42 @@ components:
     LOINC-HMDB-Rev:
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: LOINC
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.LOINC,
+            subject.LOINC,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/HMDB'
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.HMDB", "object.type"]}
+            "scopes": ["object.HMDB", "subject.type"]}
     KEGG_COMPOUND-UMLS:
       - useTemplating: True
         outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: UMLS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.UMLS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    PUBCHEM_COMPOUND-UMLS:
-      - useTemplating: True
-        outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.UMLS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
-    CHEBI-KEGG_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CHEBI,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    KEGG_COMPOUND-UMLS-Rev:
-      - useTemplating: True
-        outputs:
-          id: UMLS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: UMLS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -2061,54 +1986,129 @@ components:
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
-    CAS-PUBCHEM_COMPOUND-Rev:
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
+    PUBCHEM_COMPOUND-UMLS:
       - useTemplating: True
         outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: UMLS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CAS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
-    HMDB-UMLS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.HMDB AND _exists_:object.UMLS
-      - useTemplating: True
-        outputs:
-          id: HMDB
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.UMLS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/HMDB'
+          $ref: '#/components/x-bte-response-mapping/UMLS'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
+    CHEBI-KEGG_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.CHEBI,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CHEBI-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
+    KEGG_COMPOUND-UMLS-Rev:
+      - useTemplating: True
+        outputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.KEGG_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.UMLS", "subject.type"]}
+    CAS-PUBCHEM_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: CAS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.CAS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CAS-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
+    HMDB-UMLS:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.HMDB AND _exists_:object.UMLS
+      - useTemplating: True
+        outputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.UMLS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/UMLS'
         supportBatch: True
         requestBody:
           body: >-
@@ -2117,149 +2117,149 @@ components:
     NCIT-CHEBI-Rev:
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: NCIT
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.NCIT,
+            subject.NCIT,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
+            "scopes": ["object.CHEBI", "subject.type"]}
     UniProtKB-CHEBI-Rev:
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.UniProtKB,
+            subject.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
+            "scopes": ["object.CHEBI", "subject.type"]}
     UniProtKB-EFO-Rev:
       - useTemplating: True
         outputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.UniProtKB,
+            subject.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
+            "scopes": ["object.EFO", "subject.type"]}
     UniProtKB-PUBCHEM_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.UniProtKB,
+            subject.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:Protein"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
     UniProtKB-UMLS-Rev:
       - useTemplating: True
         outputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: UMLS
-          semantic: SmallMolecule
+          - id: UMLS
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.UniProtKB,
+            subject.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UMLS'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:Protein"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
+            "scopes": ["object.UMLS", "subject.type"]}
     UniProtKB-CAS:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.CAS
       - useTemplating: True
         outputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: CAS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: UniProtKB
+            semantic: Protein
         parameters:
           fields: >-
             object.CAS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
+          $ref: '#/components/x-bte-response-mapping/CAS'
         supportBatch: True
         requestBody:
           body: >-
@@ -2269,92 +2269,17 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.NCIT AND _exists_:object.HMDB
       - useTemplating: True
         outputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: HMDB
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: NCIT
-          semantic: ClinicalFinding
+          - id: NCIT
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.HMDB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/NCIT'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.NCIT", "object.type"]}
-    LOINC-UMLS-Rev:
-      - useTemplating: True
-        outputs:
-          id: UMLS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: UMLS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.LOINC,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UMLS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
-    PUBCHEM_COMPOUND-UMLS-Rev:
-      - useTemplating: True
-        outputs:
-          id: UMLS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: UMLS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.PUBCHEM_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UMLS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UMLS", "object.type"]}
-    NCIT-HMDB-Rev:
-      - useTemplating: True
-        outputs:
-          id: HMDB
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: HMDB
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.NCIT,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -2364,23 +2289,98 @@ components:
         supportBatch: True
         requestBody:
           body: >-
+            {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.NCIT", "object.type"]}
+    LOINC-UMLS-Rev:
+      - useTemplating: True
+        outputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.LOINC,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.UMLS", "subject.type"]}
+    PUBCHEM_COMPOUND-UMLS-Rev:
+      - useTemplating: True
+        outputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.PUBCHEM_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.UMLS", "subject.type"]}
+    NCIT-HMDB-Rev:
+      - useTemplating: True
+        outputs:
+          - id: NCIT
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: HMDB
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.NCIT,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
             {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.HMDB", "object.type"]}
+            "scopes": ["object.HMDB", "subject.type"]}
     LOINC-LOINC:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.LOINC
       - useTemplating: True
         outputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: LOINC
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: LOINC
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.LOINC,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -2396,23 +2396,23 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.UniProtKB
       - useTemplating: True
         outputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: UniProtKB
+            semantic: Protein
         requestBodyType: object
         inputs:
-          id: LOINC
-          semantic: ClinicalFinding
+          - id: LOINC
+            semantic: ClinicalFinding
         parameters:
           fields: >-
             object.UniProtKB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
+          $ref: '#/components/x-bte-response-mapping/UniProtKB'
         supportBatch: True
         requestBody:
           body: >-
@@ -2421,23 +2421,23 @@ components:
     CHEBI-PUBCHEM_COMPOUND:
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.PUBCHEM_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -2446,325 +2446,43 @@ components:
     LOINC-KEGG_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: LOINC
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.LOINC,
+            subject.LOINC,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
     CHEBI-EFO:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CHEBI AND _exists_:object.EFO
       - useTemplating: True
         outputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: CHEBI
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.EFO,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CHEBI'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CHEBI", "object.type"]}
-    CHEBI-PUBCHEM_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CHEBI,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
-    LOINC-EFO:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.EFO
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.EFO,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    KEGG_COMPOUND-KEGG_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    LOINC-MESH:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.MESH
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.MESH,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    UniProtKB-CHEBI:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.CHEBI
-      - useTemplating: True
-        outputs:
-          id: UniProtKB
-          semantic: Protein
-        requestBodyType: object
-        inputs:
-          id: UniProtKB
-          semantic: Protein
-        parameters:
-          fields: >-
-            object.CHEBI,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UniProtKB", "object.type"]}
-    LOINC-UMLS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.UMLS
-      - useTemplating: True
-        outputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        requestBodyType: object
-        inputs:
-          id: LOINC
-          semantic: ClinicalFinding
-        parameters:
-          fields: >-
-            object.UMLS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/LOINC'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.LOINC", "object.type"]}
-    PUBCHEM_COMPOUND-PUBCHEM_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: PUBCHEM_COMPOUND
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.PUBCHEM_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM_COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
-    CAS-EFO:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.EFO
-      - useTemplating: True
-        outputs:
-          id: CAS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CAS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.EFO,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
-    UniProtKB-UMLS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.UMLS
-      - useTemplating: True
-        outputs:
-          id: UniProtKB
-          semantic: Protein
-        requestBodyType: object
-        inputs:
-          id: UniProtKB
-          semantic: Protein
-        parameters:
-          fields: >-
-            object.UMLS,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.UniProtKB", "object.type"]}
-    CAS-CHEBI:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.CHEBI
-      - useTemplating: True
-        outputs:
-          id: CAS
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: CAS
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.CHEBI,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
-    EFO-KEGG_COMPOUND:
-      - useTemplating: True
-        outputs:
-          id: EFO
-          semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          id: EFO
-          semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -2774,22 +2492,279 @@ components:
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
-    NCIT-KEGG_COMPOUND-Rev:
+            {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.CHEBI", "object.type"]}
+    CHEBI-PUBCHEM_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: KEGG_COMPOUND
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.NCIT,
+            subject.CHEBI,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CHEBI-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
+    LOINC-EFO:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.EFO
+      - useTemplating: True
+        outputs:
+          - id: EFO
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.EFO,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.LOINC", "object.type"]}
+    KEGG_COMPOUND-KEGG_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.KEGG_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
+    LOINC-MESH:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.MESH
+      - useTemplating: True
+        outputs:
+          - id: MESH
+            semantic: ClinicalFinding
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.MESH,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/MESH'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["subject.LOINC", "object.type"]}
+    UniProtKB-CHEBI:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.CHEBI
+      - useTemplating: True
+        outputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: UniProtKB
+            semantic: Protein
+        parameters:
+          fields: >-
+            object.CHEBI,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CHEBI'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.UniProtKB", "object.type"]}
+    LOINC-UMLS:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.LOINC AND _exists_:object.UMLS
+      - useTemplating: True
+        outputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: LOINC
+            semantic: ClinicalFinding
+        parameters:
+          fields: >-
+            object.UMLS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/UMLS'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('LOINC') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.LOINC", "object.type"]}
+    PUBCHEM_COMPOUND-PUBCHEM_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.PUBCHEM_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.PUBCHEM_COMPOUND", "object.type"]}
+    CAS-EFO:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.EFO
+      - useTemplating: True
+        outputs:
+          - id: EFO
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: CAS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.EFO,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/EFO'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.CAS", "object.type"]}
+    UniProtKB-UMLS:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.UniProtKB AND _exists_:object.UMLS
+      - useTemplating: True
+        outputs:
+          - id: UMLS
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: UniProtKB
+            semantic: Protein
+        parameters:
+          fields: >-
+            object.UMLS,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/UMLS'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.UniProtKB", "object.type"]}
+    CAS-CHEBI:
+    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.CHEBI
+      - useTemplating: True
+        outputs:
+          - id: CHEBI
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: CAS
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.CHEBI,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/CHEBI'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.CAS", "object.type"]}
+    EFO-KEGG_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: EFO
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            object.KEGG_COMPOUND,
+            association.attributes,
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -2799,28 +2774,53 @@ components:
         supportBatch: True
         requestBody:
           body: >-
-            {"q": [ {{ queryInputs | replPrefix('KEGG_COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.KEGG_COMPOUND", "object.type"]}
-    UniProtKB-PUBCHEM_COMPOUND:
+            {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["subject.EFO", "object.type"]}
+    NCIT-KEGG_COMPOUND-Rev:
       - useTemplating: True
         outputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: NCIT
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.PUBCHEM_COMPOUND,
+            subject.NCIT,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
+          $ref: '#/components/x-bte-response-mapping/NCIT-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('KEGG.COMPOUND') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
+            "scopes": ["object.KEGG_COMPOUND", "subject.type"]}
+    UniProtKB-PUBCHEM_COMPOUND:
+      - useTemplating: True
+        outputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: UniProtKB
+            semantic: Protein
+        parameters:
+          fields: >-
+            object.PUBCHEM_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -2830,17 +2830,17 @@ components:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.HMDB AND _exists_:object.HMDB
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.HMDB,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
@@ -2855,23 +2855,23 @@ components:
     HMDB-PUBCHEM_COMPOUND:
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.PUBCHEM_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/HMDB'
+          $ref: '#/components/x-bte-response-mapping/PUBCHEM_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -2880,23 +2880,23 @@ components:
     HMDB-KEGG_COMPOUND:
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
             object.KEGG_COMPOUND,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/HMDB'
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND'
         supportBatch: True
         requestBody:
           body: >-
@@ -2905,86 +2905,83 @@ components:
     CAS-HMDB-Rev:
       - useTemplating: True
         outputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: CAS
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: HMDB
-          semantic: SmallMolecule
+          - id: HMDB
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.CAS,
+            subject.CAS,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/HMDB'
+          $ref: '#/components/x-bte-response-mapping/CAS-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('HMDB') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.HMDB", "object.type"]}
+            "scopes": ["object.HMDB", "subject.type"]}
     LOINC-UniProtKB-Rev:
       - useTemplating: True
         outputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: LOINC
+            semantic: ClinicalFinding
         requestBodyType: object
         inputs:
-          id: UniProtKB
-          semantic: Protein
+          - id: UniProtKB
+            semantic: Protein
         parameters:
           fields: >-
-            object.LOINC,
+            subject.LOINC,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UniProtKB'
+          $ref: '#/components/x-bte-response-mapping/LOINC-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('UniProtKB') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
-            "scopes": ["subject.UniProtKB", "object.type"]}
+            "scopes": ["object.UniProtKB", "subject.type"]}
     CHEBI-EFO-Rev:
       - useTemplating: True
         outputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: CHEBI
+            semantic: SmallMolecule
         requestBodyType: object
         inputs:
-          id: EFO
-          semantic: SmallMolecule
+          - id: EFO
+            semantic: SmallMolecule
         parameters:
           fields: >-
-            object.CHEBI,
+            subject.CHEBI,
             association.attributes,
-            association.sources,   ## TRAPI 1.4
+            association.sources,
             subject.name,
             object.name
           size: 1000
         predicate: correlated_with
         response_mapping:
-          $ref: '#/components/x-bte-response-mapping/EFO'
+          $ref: '#/components/x-bte-response-mapping/CHEBI-rev'
         supportBatch: True
         requestBody:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.EFO", "object.type"]}
+            "scopes": ["object.EFO", "subject.type"]}
 openapi: 3.0.3
 servers:
   - x-maturity: production
     url: https://biothings.ncats.io/multiomics_wellness_kp
     description: Encrypted Production server
-  - x-maturity: production
-    url: https://biothings.ncats.io/multiomics_wellness_kp
-    description: Production server
 paths:
   /association:
     post:
