@@ -2999,7 +2999,7 @@ paths:
         - $ref: '#/components/parameters/email'
         - $ref: '#/components/parameters/size'
       responses:
-        200:
+        "200":
           description: 'A 200 status code indicates a successful query, and is accompanied by the query response payload.'
       requestBody:
         content:
@@ -3033,7 +3033,7 @@ paths:
         - $ref: '#/components/parameters/email'
         - $ref: '#/components/parameters/size'
       responses:
-        200:
+        "200":
           description: 'A 200 status code indicates a successful query, and is accompanied by the query response payload.'
       description: >-
         By default, this will return the complete association in JSON format. If the input is not valid, 404 (NOT FOUND) will be returned.
@@ -3074,7 +3074,7 @@ paths:
         - $ref: '#/components/parameters/fetch_all'
         - $ref: '#/components/parameters/scroll_id'
       responses:
-        200:
+        "200":
           description: 'A 200 status code indicates a successful query, and is accompanied by the query response payload.'
       requestBody:
         content:
@@ -3234,7 +3234,7 @@ paths:
         - $ref: '#/components/parameters/dotfield'
         - $ref: '#/components/parameters/email'
       responses:
-        200:
+        "200":
           description: 'A 200 status code indicates a successful query, and is accompanied by the query response payload.'
       description: 'Query service. In the output, "total" in the output gives the total number  of matching hits, while the actual hits are returned under "hits" field.'
       tags:
@@ -3242,7 +3242,7 @@ paths:
   /metadata/fields:
     get:
       responses:
-        200:
+        "200":
           description: 'A 200 status code indicates a successful query, and is accompanied by the query response payload.'
       description: Get metadata about the data fields available from the API
       tags:
@@ -3250,7 +3250,7 @@ paths:
   /metadata:
     get:
       responses:
-        200:
+        "200":
           description: 'A 200 status code indicates a successful query, and is accompanied by the query response payload.'
       description: Get metadata about the data available from the API
       tags:
