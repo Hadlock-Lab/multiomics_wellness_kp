@@ -7,7 +7,7 @@ info:
     team:
       - Multiomics Provider
       - Service Provider
-  version: '1.7'
+  version: '1.7.2'
   title: Multiomics Wellness KP API
   termsOfService: https://biothings.io/about
   contact:
@@ -2981,7 +2981,13 @@ openapi: 3.0.3
 servers:
   - x-maturity: production
     url: https://biothings.ncats.io/multiomics_wellness_kp
-    description: Encrypted Production server
+    description: ITRB Prod server
+  - x-maturity: testing
+    url: https://biothings.test.transltr.io/multiomics_wellness_kp
+    description: ITRB Test server
+  - x-maturity: staging
+    url: https://biothings.ci.transltr.io/multiomics_wellness_kp
+    description: ITRB CI server
 paths:
   /association:
     post:
