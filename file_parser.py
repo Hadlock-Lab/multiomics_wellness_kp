@@ -23,8 +23,8 @@ correlation_statistic = {
 
 
 def load_data(data_folder):
-    edges_file_path = os.path.join(data_folder, "wellness_kg_edges_v1.7.tsv")
-    nodes_file_path = os.path.join(data_folder, "wellness_kg_nodes_v1.7.tsv")
+    edges_file_path = os.path.join(data_folder, "wellness_kg_edges_v1.7.2.tsv")
+    nodes_file_path = os.path.join(data_folder, "wellness_kg_nodes_v1.7.2.tsv")
     nodes_f = open(nodes_file_path)
     edges_f = open(edges_file_path)
     nodes_data = csv.reader(nodes_f, delimiter="\t")
@@ -63,11 +63,11 @@ def load_data(data_folder):
 
             # Type_of_relationship
             # could be Ridge regression or Spearman
-            if line[8] in correlation_statistic:
-                edge_attributes.append(correlation_statistic[line[8]])
+            if line[10] in correlation_statistic:
+                edge_attributes.append(correlation_statistic[line[10]])
             else:
                 #print(line)
-                raise Exception(f"Column 8 has unexpected value for type of statistic: {line[8]}")
+                raise Exception(f"Column 10 has unexpected value for type of statistic: {line[10]}")
 
             # TRAPI 1.3 style source
             edge_attributes.append(
@@ -77,23 +77,39 @@ def load_data(data_folder):
                 }
             )
 
+            # knowledge level
+            edge_attributes.append(
+                {
+                    "attribute_type_id": "biolink:knowledge_level",
+                    "value": line[3],
+                    #"attribute_source": attribute_source
+                }
+            )
+
+            # agent type
+            edge_attributes.append(
+                {
+                    "attribute_type_id": "biolink:agent_type",
+                    "value": line[4],
+                    #"attribute_source": attribute_source
+                }
+            )
+
             # strength_of_relationship
             edge_attributes.append(
                 {
                     "attribute_type_id": "STATO:0000085", # http://purl.obolibrary.org/obo/STATO_0000085
                     "description": "Effect size estimate",
                     "value": line[9] ## float
-                    #"value_type_id": "biolink:XXX" # ???
                 }
             )
 
             # relation
             edge_attributes.append(
                 {
-                    "attribute_type_id": line[6],
+                    "attribute_type_id": line[8],
                     "description": "Predicate id",
-                    "value": line[3],
-                    #"value_type_id": "biolink:id" # ???
+                    "value": line[5],
                 }
             )
 
@@ -102,7 +118,7 @@ def load_data(data_folder):
                 {
                     "attribute_type_id": "GECKO:0000106", # http://purl.obolibrary.org/obo/GECKO_0000106
                     "description": "Sample size used to compute the correlation", # ???
-                    "value": line[7] ## int(float())
+                    "value": line[9] ## int(float())
                 }
             )
 
@@ -111,23 +127,22 @@ def load_data(data_folder):
                 {
                     "attribute_type_id": "NCIT:C61594",
                     "description": "Bonferroni pvalue",
-                    "value": line[13]  ## float
+                    "value": line[15]  ## float
                 }
             )
 
 
             # Add qualifier, if available
-            domain = None if (line[10] == '' or line[10] == 'nan') else line[10]
-            qualifier = None if (line[11] == '' or line[11] == 'nan') else line[11]
-            qualifier_value = None if (line[12] == '' or line[12] == 'nan') else line[12]
+            domain = None if (line[12] == '' or line[12] == 'nan') else line[12]
+            qualifier = None if (line[13] == '' or line[13] == 'nan') else line[13]
+            qualifier_value = None if (line[14] == '' or line[14] == 'nan') else line[14]
             if not(qualifier is None):
                 edge_attributes.append(
                     {
                         "attribute_type_id": qualifier,
                         "description": domain,
                         "value": qualifier_value,
-                        #"value_type_id": "XXX ???" # ???
-                    }
+                     }
                 )
 
             # sources - TRAPI 1.4 style
@@ -177,4 +192,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
