@@ -7,8 +7,8 @@
     },
     "dumper": {
         "data_url": [
-            "https://storage.googleapis.com/multiomics_provider_kp_data/wellness/wellness_kg_edges_v1.7.tsv",
-            "https://storage.googleapis.com/multiomics_provider_kp_data/wellness/wellness_kg_nodes_v1.7.tsv"
+            "https://storage.googleapis.com/multiomics_provider_kp_data/wellness/wellness_kg_edges_v1.7.2.tsv",
+            "https://storage.googleapis.com/multiomics_provider_kp_data/wellness/wellness_kg_nodes_v1.7.2.tsv"
         ],
         "uncompress": false,
         "release": "version:get_release"
