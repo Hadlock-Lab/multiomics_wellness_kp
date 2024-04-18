@@ -100,7 +100,7 @@ def load_data(data_folder):
                 {
                     "attribute_type_id": "STATO:0000085", # http://purl.obolibrary.org/obo/STATO_0000085
                     "description": "Effect size estimate",
-                    "value": line[9] ## float
+                    "value": line[11] ## float
                 }
             )
 
@@ -142,7 +142,7 @@ def load_data(data_folder):
                         "attribute_type_id": qualifier,
                         "description": domain,
                         "value": qualifier_value,
-                     }
+                    }
                 )
 
             # sources - TRAPI 1.4 style
