@@ -7,7 +7,7 @@ info:
     team:
       - Multiomics Provider
       - Service Provider
-  version: '1.7'
+  version: '1.7.2'
   title: Multiomics Wellness KP API
   termsOfService: https://biothings.io/about
   contact:
@@ -495,31 +495,6 @@ components:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('CHEBI') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
             "scopes": ["subject.CHEBI", "object.type"]}
-    CAS-UMLS-Rev:
-      - useTemplating: True
-        outputs:
-          - id: CAS
-            semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          - id: UMLS
-            semantic: SmallMolecule
-        parameters:
-          fields: >-
-            subject.CAS,
-            association.attributes,
-            association.sources,
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/CAS-rev'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('UMLS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["object.UMLS", "subject.type"]}
     CAS-KEGG_COMPOUND:
       - useTemplating: True
         outputs:
@@ -900,32 +875,6 @@ components:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('NCIT') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
             "scopes": ["subject.NCIT", "object.type"]}
-    CAS-UMLS:
-    ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.UMLS
-      - useTemplating: True
-        outputs:
-          - id: UMLS
-            semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          - id: CAS
-            semantic: SmallMolecule
-        parameters:
-          fields: >-
-            object.UMLS,
-            association.attributes,
-            association.sources,
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/UMLS'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('CAS') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["subject.CAS", "object.type"]}
     CAS-HMDB:
     ## https://biothings.ncats.io/multiomics_wellness_kp/query?q=_exists_:subject.CAS AND _exists_:object.HMDB
       - useTemplating: True
@@ -1534,31 +1483,6 @@ components:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:ClinicalFinding"]' ) }} ],
             "scopes": ["object.EFO", "subject.type"]}
-    KEGG_COMPOUND-PUBCHEM_COMPOUND-Rev:
-      - useTemplating: True
-        outputs:
-          - id: KEGG.COMPOUND
-            semantic: SmallMolecule
-        requestBodyType: object
-        inputs:
-          - id: PUBCHEM.COMPOUND
-            semantic: SmallMolecule
-        parameters:
-          fields: >-
-            subject.KEGG_COMPOUND,
-            association.attributes,
-            association.sources,
-            subject.name,
-            object.name
-          size: 1000
-        predicate: correlated_with
-        response_mapping:
-          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND-rev'
-        supportBatch: True
-        requestBody:
-          body: >-
-            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
-            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
     EFO-PUBCHEM_COMPOUND:
       - useTemplating: True
         outputs:
@@ -1584,6 +1508,31 @@ components:
           body: >-
             {"q": [ {{ queryInputs | replPrefix('EFO') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
             "scopes": ["subject.EFO", "object.type"]}
+    KEGG_COMPOUND-PUBCHEM_COMPOUND-Rev:
+      - useTemplating: True
+        outputs:
+          - id: KEGG.COMPOUND
+            semantic: SmallMolecule
+        requestBodyType: object
+        inputs:
+          - id: PUBCHEM.COMPOUND
+            semantic: SmallMolecule
+        parameters:
+          fields: >-
+            subject.KEGG_COMPOUND,
+            association.attributes,
+            association.sources,
+            subject.name,
+            object.name
+          size: 1000
+        predicate: correlated_with
+        response_mapping:
+          $ref: '#/components/x-bte-response-mapping/KEGG_COMPOUND-rev'
+        supportBatch: True
+        requestBody:
+          body: >-
+            {"q": [ {{ queryInputs | replPrefix('PUBCHEM.COMPOUND') | wrap( '["', '","biolink:SmallMolecule"]' ) }} ],
+            "scopes": ["object.PUBCHEM_COMPOUND", "subject.type"]}
     EFO-PUBCHEM_COMPOUND-Rev:
       - useTemplating: True
         outputs:
@@ -2981,7 +2930,13 @@ openapi: 3.0.3
 servers:
   - x-maturity: production
     url: https://biothings.ncats.io/multiomics_wellness_kp
-    description: Encrypted Production server
+    description: ITRB Prod server
+  - x-maturity: testing
+    url: https://biothings.test.transltr.io/multiomics_wellness_kp
+    description: ITRB Test server
+  - x-maturity: staging
+    url: https://biothings.ci.transltr.io/multiomics_wellness_kp
+    description: ITRB CI server
 paths:
   /association:
     post:
@@ -3115,8 +3070,6 @@ paths:
         - $ref: '#/components/x-bte-kgs-operations/CAS-KEGG_COMPOUND-Rev'
         - $ref: '#/components/x-bte-kgs-operations/CAS-PUBCHEM_COMPOUND'
         - $ref: '#/components/x-bte-kgs-operations/CAS-PUBCHEM_COMPOUND-Rev'
-        - $ref: '#/components/x-bte-kgs-operations/CAS-UMLS'
-        - $ref: '#/components/x-bte-kgs-operations/CAS-UMLS-Rev'
         - $ref: '#/components/x-bte-kgs-operations/CHEBI-CHEBI'
         - $ref: '#/components/x-bte-kgs-operations/CHEBI-CHEBI-Rev'
         - $ref: '#/components/x-bte-kgs-operations/CHEBI-EFO'
