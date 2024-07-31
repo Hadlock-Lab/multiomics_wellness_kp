@@ -13,8 +13,8 @@ info:
   contact:
     email: gglusman@isbscience.org
     name: Gwenlyn Glusman
-    x-role: responsible developers
-    x-id: https://github.com/biothings
+    x-role: responsible developer
+    x-id: https://github.com/gglusman
   description: Documentation of the BioThings API for Translator Multiomics Team's  Wellness KP.
 components:
   parameters:
